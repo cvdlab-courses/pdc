@@ -1,2 +1,1 @@
-# cpd
-Calcolo Parallelo e Distribuito
+# Parallel and Distributed Computing
