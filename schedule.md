@@ -1,6 +1,6 @@
-# Web Graphics Programming Laboratory
+# Parallel and Distributed Computing
 
-## Calendar
+## Schedule
 
 ### October 2016
 
