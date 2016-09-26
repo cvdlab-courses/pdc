@@ -1,0 +1,1503 @@
+\documentclass[ignorenonframetext,]{beamer}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\newif\ifbibliography
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+\newcommand{\ImportTok}[1]{{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+\newcommand{\BuiltInTok}[1]{{#1}}
+\newcommand{\ExtensionTok}[1]{{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+\newcommand{\RegionMarkerTok}[1]{{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\NormalTok}[1]{{#1}}
+
+% Prevent slide breaks in the middle of a paragraph:
+\widowpenalties 1 10000
+\raggedbottom
+
+\AtBeginPart{
+  \let\insertpartnumber\relax
+  \let\partname\relax
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \let\insertsectionnumber\relax
+    \let\sectionname\relax
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \let\insertsubsectionnumber\relax
+  \let\subsectionname\relax
+  \frame{\subsectionpage}
+}
+
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+
+\title{Learn Julia in Y minutes}
+\date{Get the code:
+\href{https://learnxinyminutes.com/docs/julia/}{learnjulia.jl}}
+
+\begin{document}
+\frame{\titlepage}
+
+\section{Primitive Datatypes and
+Operators}\label{primitive-datatypes-and-operators}
+
+\begin{frame}[fragile]{There are several basic types of numbers.}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FloatTok{3}\NormalTok{; }\CommentTok{# => 3 (Int64)}
+\FloatTok{3.2}\NormalTok{; }\CommentTok{# => 3.2 (Float64)}
+\FloatTok{2} \NormalTok{+ }\FloatTok{1im}\NormalTok{; }\CommentTok{# => 2 + 1im (Complex\{Int64\})}
+\FloatTok{2}\NormalTok{//}\FloatTok{3}\NormalTok{; }\CommentTok{# => 2//3 (Rational\{Int64\})}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{All of the normal infix operators are available.}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FloatTok{1} \NormalTok{+ }\FloatTok{1}\NormalTok{; }\CommentTok{# => 2}
+\FloatTok{8} \NormalTok{- }\FloatTok{1}\NormalTok{; }\CommentTok{# => 7}
+\FloatTok{10} \NormalTok{* }\FloatTok{2}\NormalTok{; }\CommentTok{# => 20}
+\FloatTok{35} \NormalTok{/ }\FloatTok{5}\NormalTok{; }\CommentTok{# => 7.0}
+\FloatTok{5} \NormalTok{/ }\FloatTok{2}\NormalTok{; }\CommentTok{# => 2.5 # dividing an Int by an Int always results in a Float}
+\NormalTok{div(}\FloatTok{5}\NormalTok{, }\FloatTok{2}\NormalTok{); }\CommentTok{# => 2 # for a truncated result, use div}
+\FloatTok{5} \NormalTok{\textbackslash{} }\FloatTok{35}\NormalTok{; }\CommentTok{# => 7.0}
+\FloatTok{2} \NormalTok{^ }\FloatTok{2}\NormalTok{; }\CommentTok{# => 4 # power, not bitwise xor}
+\FloatTok{12} \NormalTok{% }\FloatTok{10}\NormalTok{; }\CommentTok{# => 2}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Enforce precedence with parentheses}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{(}\FloatTok{1} \NormalTok{+ }\FloatTok{3}\NormalTok{) * }\FloatTok{2}\NormalTok{; }\CommentTok{# => 8}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Bitwise Operators}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{~}\FloatTok{2}\NormalTok{; }\CommentTok{# => -3   # bitwise not}
+\FloatTok{3} \NormalTok{& }\FloatTok{5}\NormalTok{; }\CommentTok{# => 1 # bitwise and}
+\FloatTok{2} \NormalTok{| }\FloatTok{4}\NormalTok{; }\CommentTok{# => 6 # bitwise or}
+\FloatTok{2} \NormalTok{$ }\FloatTok{4}\NormalTok{; }\CommentTok{# => 6 # bitwise xor}
+\FloatTok{2} \NormalTok{>>> }\FloatTok{1}\NormalTok{; }\CommentTok{# => 1 # logical shift right}
+\FloatTok{2} \NormalTok{>> }\FloatTok{1} \NormalTok{; }\CommentTok{# => 1 # arithmetic shift right}
+\FloatTok{2} \NormalTok{<< }\FloatTok{1} \NormalTok{; }\CommentTok{# => 4 # logical/arithmetic shift left}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Boolean values are primitives}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{true}
+\NormalTok{false}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Boolean operators}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{!true; }\CommentTok{# => false}
+\NormalTok{!false; }\CommentTok{# => true}
+\FloatTok{1} \NormalTok{== }\FloatTok{1}\NormalTok{; }\CommentTok{# => true}
+\FloatTok{2} \NormalTok{== }\FloatTok{1}\NormalTok{; }\CommentTok{# => false}
+\FloatTok{1} \NormalTok{!= }\FloatTok{1}\NormalTok{; }\CommentTok{# => false}
+\FloatTok{2} \NormalTok{!= }\FloatTok{1}\NormalTok{; }\CommentTok{# => true}
+\FloatTok{1} \NormalTok{< }\FloatTok{10}\NormalTok{; }\CommentTok{# => true}
+\FloatTok{1} \NormalTok{> }\FloatTok{10}\NormalTok{; }\CommentTok{# => false}
+\FloatTok{2} \NormalTok{<= }\FloatTok{2}\NormalTok{; }\CommentTok{# => true}
+\FloatTok{2} \NormalTok{>= }\FloatTok{2}\NormalTok{; }\CommentTok{# => true}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Comparisons can be chained}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FloatTok{1} \NormalTok{< }\FloatTok{2} \NormalTok{< }\FloatTok{3}\NormalTok{; }\CommentTok{# => true}
+\FloatTok{2} \NormalTok{< }\FloatTok{3} \NormalTok{< }\FloatTok{2}\NormalTok{; }\CommentTok{# => false}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Strings are created with "}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\StringTok{"This is a string."}
+\end{Highlighting}
+\end{Shaded}
+
+Julia has several types of strings, including ASCIIString and
+UTF8String. More on this in the Types section.
+
+\begin{block}{Character literals are written with '}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CharTok{'a'}
+\end{Highlighting}
+\end{Shaded}
+
+\end{block}
+
+\begin{block}{Some strings can be indexed like an array of characters}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\StringTok{"This is a string"}\NormalTok{[}\FloatTok{1}\NormalTok{]; }\CommentTok{# => 'T' # Julia indexes from 1}
+\end{Highlighting}
+\end{Shaded}
+
+\end{block}
+
+\begin{block}{However, this is will not work well for UTF8 strings,}
+
+so iterating over strings is recommended (map, for loops, etc).
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]{\$ can be used for string interpolation:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\StringTok{"2 + 2 = $(2 + 2)"}\NormalTok{; }\CommentTok{# => "2 + 2 = 4"}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{block}{You can put any Julia expression inside the parentheses.}
+
+\end{block}
+
+\begin{block}{Another way to format strings is the printf macro.}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{@printf }\StringTok{"%d is less than %f"} \FloatTok{4.5} \FloatTok{5.3} \CommentTok{# 5 is less than 5.300000}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FloatTok{5} \NormalTok{is less than }\FloatTok{5.300000}
+\end{Highlighting}
+\end{Shaded}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]{Printing is easy}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{println(}\StringTok{"I'm Julia. Nice to meet you!"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{I'm Julia. Nice to meet you!}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{String can be compared lexicographically}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\StringTok{"good"} \NormalTok{> }\StringTok{"bye"}\NormalTok{; }\CommentTok{# => true}
+\StringTok{"good"} \NormalTok{== }\StringTok{"good"}\NormalTok{; }\CommentTok{# => true}
+\StringTok{"1 + 2 = 3"} \NormalTok{== }\StringTok{"1 + 2 = $(1+2)"}\NormalTok{; }\CommentTok{# => true}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\section{Variables and Collections}\label{variables-and-collections}
+
+\begin{frame}[fragile]{You don't declare variables before assigning to
+them.}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{some_var = }\FloatTok{5} \CommentTok{# => 5}
+\NormalTok{some_var }\CommentTok{# => 5}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Accessing a previously unassigned variable is an
+error}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{try}
+    \NormalTok{some_other_var }\CommentTok{# => ERROR: some_other_var not defined}
+\KeywordTok{catch} \NormalTok{e}
+    \NormalTok{println(e)}
+\KeywordTok{end}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{UndefVarError(:some_other_var)}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Variable names start with a letter or
+underscore.}
+
+After that, you can use letters, digits, underscores, and exclamation
+points.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{SomeOtherVar123! = }\FloatTok{6} \CommentTok{# => 6}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{You can also use certain unicode characters}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{☃ = }\FloatTok{8} \CommentTok{# => 8}
+\end{Highlighting}
+\end{Shaded}
+
+These are especially handy for mathematical notation
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FloatTok{2} \NormalTok{* π }\CommentTok{# => 6.283185307179586}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}{A note on naming conventions in Julia:}
+
+\begin{itemize}
+\item
+  Word separation can be indicated by underscores ('\_'), but use of
+  underscores is discouraged unless the name would be hard to read
+  otherwise.
+\item
+  Names of Types begin with a capital letter and word separation is
+  shown with CamelCase instead of underscores.
+\item
+  Names of functions and macros are in lower case, without underscores.
+\item
+  Functions that modify their inputs have names that end in !. These
+  functions are sometimes called mutating functions or in-place
+  functions.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Arrays store a sequence of values indexed by
+integers 1 through n:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{julia> a = }\DataTypeTok{Int64}\NormalTok{[] }
+\FloatTok{0}\NormalTok{-element }\DataTypeTok{Array}\NormalTok{\{}\DataTypeTok{Int64}\NormalTok{,}\FloatTok{1}\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{1-dimensional array literals can be written with
+comma-separated values.}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{julia> b = [}\FloatTok{4}\NormalTok{, }\FloatTok{5}\NormalTok{, }\FloatTok{6}\NormalTok{]}
+
+\FloatTok{3}\NormalTok{-element }\DataTypeTok{Array}\NormalTok{\{}\DataTypeTok{Int64}\NormalTok{,}\FloatTok{1}\NormalTok{\}:}
+ \FloatTok{4}
+ \FloatTok{5}
+ \FloatTok{6}
+\NormalTok{julia> b = [}\FloatTok{4}\NormalTok{; }\FloatTok{5}\NormalTok{; }\FloatTok{6}\NormalTok{]}
+
+\FloatTok{3}\NormalTok{-element }\DataTypeTok{Array}\NormalTok{\{}\DataTypeTok{Int64}\NormalTok{,}\FloatTok{1}\NormalTok{\}:}
+ \FloatTok{4}
+ \FloatTok{5}
+ \FloatTok{6}
+\NormalTok{julia> b[}\FloatTok{1}\NormalTok{]}
+
+\FloatTok{4}
+\NormalTok{julia> b[}\KeywordTok{end}\NormalTok{]}
+\FloatTok{6}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{2-dimensional arrays use space-separated values
+and semicolon-separated rows.}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{julia> matrix = [}\FloatTok{1} \FloatTok{2}\NormalTok{; }\FloatTok{3} \FloatTok{4}\NormalTok{]}
+\FloatTok{2}\NormalTok{x2 }\DataTypeTok{Array}\NormalTok{\{}\DataTypeTok{Int64}\NormalTok{,}\FloatTok{2}\NormalTok{\}:}
+ \FloatTok{1}  \FloatTok{2}
+ \FloatTok{3}  \FloatTok{4}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Arrays of a particular Type}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{julia> b = }\DataTypeTok{Int8}\NormalTok{[}\FloatTok{4}\NormalTok{, }\FloatTok{5}\NormalTok{, }\FloatTok{6}\NormalTok{]}
+\FloatTok{3}\NormalTok{-element }\DataTypeTok{Array}\NormalTok{\{}\DataTypeTok{Int8}\NormalTok{,}\FloatTok{1}\NormalTok{\}:}
+ \FloatTok{4}
+ \FloatTok{5}
+ \FloatTok{6}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Add stuff to the end of a list with push! and
+append!}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a = []}
+\NormalTok{push!(a,}\FloatTok{1}\NormalTok{)     }\CommentTok{# => [1]}
+\NormalTok{push!(a,}\FloatTok{2}\NormalTok{)     }\CommentTok{# => [1,2]}
+\NormalTok{push!(a,}\FloatTok{4}\NormalTok{)     }\CommentTok{# => [1,2,4]}
+\NormalTok{push!(a,}\FloatTok{3}\NormalTok{)     }\CommentTok{# => [1,2,4,3]}
+\NormalTok{append!(a,b)   }\CommentTok{# => [1,2,4,3,4,5,6]}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Remove from the end with pop}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{pop!(b)        }\CommentTok{# => 6 and b is now [4,5]}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Let's put it back}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{push!(b,}\FloatTok{6}\NormalTok{)   }\CommentTok{# b is now [4,5,6] again.}
+\NormalTok{a[}\FloatTok{1}\NormalTok{] }\CommentTok{# => 1 # remember that Julia indexes from 1, not 0!}
+\end{Highlighting}
+\end{Shaded}
+
+end is a shorthand for the last index. It can be used in any indexing
+expression
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a[}\KeywordTok{end}\NormalTok{] }\CommentTok{# => 6}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{we also have shift and unshift}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{shift!(a) }\CommentTok{# => 1 and a is now [2,4,3,4,5,6]}
+\NormalTok{unshift!(a,}\FloatTok{7}\NormalTok{) }\CommentTok{# => [7,2,4,3,4,5,6]}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Function names that end in exclamations points}
+
+indicate that they modify their argument
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{arr = [}\FloatTok{5}\NormalTok{,}\FloatTok{4}\NormalTok{,}\FloatTok{6}\NormalTok{] }\CommentTok{# => 3-element Int64 Array: [5,4,6]}
+\NormalTok{sort(arr) }\CommentTok{# => [4,5,6]; arr is still [5,4,6]}
+\NormalTok{sort!(arr) }\CommentTok{# => [4,5,6]; arr is now [4,5,6]}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Looking out of bounds is a BoundsError}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{try}
+    \NormalTok{a[}\FloatTok{0}\NormalTok{] }\CommentTok{# => ERROR: BoundsError() in getindex at array.jl:270}
+    \NormalTok{a[}\KeywordTok{end}\NormalTok{+}\FloatTok{1}\NormalTok{] }\CommentTok{# => ERROR: BoundsError() in getindex at array.jl:270}
+\KeywordTok{catch} \NormalTok{e}
+    \NormalTok{println(e)}
+\KeywordTok{end}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{BoundsError(}\DataTypeTok{Int64}\NormalTok{[],(}\FloatTok{0}\NormalTok{,))}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}{Errors list the line and file}
+
+they came from, even if it's in the standard library. If you built Julia
+from source, you can look in the folder base inside the julia folder to
+find these files.
+
+\end{frame}
+
+\begin{frame}[fragile]{You can initialize arrays from ranges}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a = [}\FloatTok{1}\NormalTok{:}\FloatTok{5}\NormalTok{;] }\CommentTok{# => 5-element Int64 Array: [1,2,3,4,5]}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{You can look at ranges with slice syntax.}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a[}\FloatTok{1}\NormalTok{:}\FloatTok{3}\NormalTok{] }\CommentTok{# => [1, 2, 3]}
+\NormalTok{a[}\FloatTok{2}\NormalTok{:}\KeywordTok{end}\NormalTok{] }\CommentTok{# => [2, 3, 4, 5]}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Remove elements from an array by index with
+splice!}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{arr = [}\FloatTok{3}\NormalTok{,}\FloatTok{4}\NormalTok{,}\FloatTok{5}\NormalTok{]}
+\NormalTok{splice!(arr,}\FloatTok{2}\NormalTok{) }\CommentTok{# => 4 ; arr is now [3,5]}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Concatenate lists with append!}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{b = [}\FloatTok{1}\NormalTok{,}\FloatTok{2}\NormalTok{,}\FloatTok{3}\NormalTok{]}
+\NormalTok{append!(a,b) }\CommentTok{# Now a is [1, 2, 3, 4, 5, 1, 2, 3]}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Check for existence in a list with in}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{in}\NormalTok{(}\FloatTok{1}\NormalTok{, a) }\CommentTok{# => true}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Examine the length with \texttt{length}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{length(a) }\CommentTok{# => 8}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Tuples are immutable.}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{tup = (}\FloatTok{1}\NormalTok{, }\FloatTok{2}\NormalTok{, }\FloatTok{3}\NormalTok{) }\CommentTok{# => (1,2,3) # an (Int64,Int64,Int64) tuple.}
+\NormalTok{tup[}\FloatTok{1}\NormalTok{] }\CommentTok{# => 1}
+\KeywordTok{try}\NormalTok{:}
+    \NormalTok{tup[}\FloatTok{1}\NormalTok{] = }\FloatTok{3} \CommentTok{# => ERROR: no method setindex!((Int64,Int64,Int64),Int64,Int64)}
+\KeywordTok{catch} \NormalTok{e}
+    \NormalTok{println(e)}
+\KeywordTok{end}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{MethodError(setindex!,(:tup,}\FloatTok{3}\NormalTok{,}\FloatTok{1}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Many list functions also work on tuples}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{length(tup) }\CommentTok{# => 3}
+\NormalTok{tup[}\FloatTok{1}\NormalTok{:}\FloatTok{2}\NormalTok{] }\CommentTok{# => (1,2)}
+\KeywordTok{in}\NormalTok{(}\FloatTok{2}\NormalTok{, tup) }\CommentTok{# => true}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{You can unpack tuples into variables}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a, b, c = (}\FloatTok{1}\NormalTok{, }\FloatTok{2}\NormalTok{, }\FloatTok{3}\NormalTok{) }\CommentTok{# => (1,2,3)  # a is now 1, b is now 2 and c is now 3}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Tuples are created even if you leave out the
+parentheses}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{d, e, f = }\FloatTok{4}\NormalTok{, }\FloatTok{5}\NormalTok{, }\FloatTok{6} \CommentTok{# => (4,5,6)}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{A 1-element tuple is distinct from the value it
+contains}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{(}\FloatTok{1}\NormalTok{,) == }\FloatTok{1} \CommentTok{# => false}
+\NormalTok{(}\FloatTok{1}\NormalTok{) == }\FloatTok{1} \CommentTok{# => true}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Look how easy it is to swap two values}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{e, d = d, e  }\CommentTok{# => (5,4) # d is now 5 and e is now 4}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Dictionaries store mappings}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{empty_dict = }\DataTypeTok{Dict}\NormalTok{() }\CommentTok{# => Dict\{Any,Any\}()}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{You can create a dictionary using a literal}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{filled_dict = }\DataTypeTok{Dict}\NormalTok{(}\StringTok{"one"}\NormalTok{=> }\FloatTok{1}\NormalTok{, }\StringTok{"two"}\NormalTok{=> }\FloatTok{2}\NormalTok{, }\StringTok{"three"}\NormalTok{=> }\FloatTok{3}\NormalTok{)}
+\CommentTok{# => Dict\{ASCIIString,Int64\}}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Look up values with {[}{]}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{filled_dict[}\StringTok{"one"}\NormalTok{] }\CommentTok{# => 1}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Get all keys}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{keys(filled_dict)}
+\CommentTok{# => KeyIterator\{Dict\{ASCIIString,Int64\}\}(["three"=>3,"one"=>1,"two"=>2])}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}{Note}
+
+dictionary keys are not sorted or in the order you inserted them.
+
+\end{frame}
+
+\begin{frame}[fragile]{Get all values}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{values(filled_dict)}
+\CommentTok{# => ValueIterator\{Dict\{ASCIIString,Int64\}\}(["three"=>3,"one"=>1,"two"=>2])}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{block}{Note - Same as above regarding key ordering.}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]{Check for existence of keys in a dictionary with
+in, haskey}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{in}\NormalTok{((}\StringTok{"one"} \NormalTok{=> }\FloatTok{1}\NormalTok{), filled_dict) }\CommentTok{# => true}
+\KeywordTok{in}\NormalTok{((}\StringTok{"two"} \NormalTok{=> }\FloatTok{3}\NormalTok{), filled_dict) }\CommentTok{# => false}
+\NormalTok{haskey(filled_dict, }\StringTok{"one"}\NormalTok{) }\CommentTok{# => true}
+\NormalTok{haskey(filled_dict, }\FloatTok{1}\NormalTok{) }\CommentTok{# => false}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Trying to look up a non-existent key will raise
+an error}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{try}
+    \NormalTok{filled_dict[}\StringTok{"four"}\NormalTok{] }\CommentTok{# => ERROR: key not found: four in getindex at dict.jl:489}
+\KeywordTok{catch} \NormalTok{e}
+    \NormalTok{println(e)}
+\KeywordTok{end}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{UndefVarError(:filled_dict)}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Use the get method}
+
+to avoid that error by providing a default value
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{get(dictionary,key,default_value)}
+\NormalTok{get(filled_dict,}\StringTok{"one"}\NormalTok{,}\FloatTok{4}\NormalTok{) }\CommentTok{# => 1}
+\NormalTok{get(filled_dict,}\StringTok{"four"}\NormalTok{,}\FloatTok{4}\NormalTok{) }\CommentTok{# => 4}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Use Sets to represent collections of unordered,
+unique values}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{empty_set = }\DataTypeTok{Set}\NormalTok{() }\CommentTok{# => Set\{Any\}()}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Initialize a set with values}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{filled_set = }\DataTypeTok{Set}\NormalTok{([}\FloatTok{1}\NormalTok{,}\FloatTok{2}\NormalTok{,}\FloatTok{2}\NormalTok{,}\FloatTok{3}\NormalTok{,}\FloatTok{4}\NormalTok{]) }\CommentTok{# => Set\{Int64\}(1,2,3,4)}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Add more values to a set}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{push!(filled_set,}\FloatTok{5}\NormalTok{) }\CommentTok{# => Set\{Int64\}(5,4,2,3,1)}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Check if the values are in the set}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{in}\NormalTok{(}\FloatTok{2}\NormalTok{, filled_set) }\CommentTok{# => true}
+\KeywordTok{in}\NormalTok{(}\FloatTok{10}\NormalTok{, filled_set) }\CommentTok{# => false}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{There are functions for set intersection, union,
+and difference.}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{other_set = }\DataTypeTok{Set}\NormalTok{([}\FloatTok{3}\NormalTok{, }\FloatTok{4}\NormalTok{, }\FloatTok{5}\NormalTok{, }\FloatTok{6}\NormalTok{]) }\CommentTok{# => Set\{Int64\}(6,4,5,3)}
+\NormalTok{intersect(filled_set, other_set) }\CommentTok{# => Set\{Int64\}(3,4,5)}
+\NormalTok{union(filled_set, other_set) }\CommentTok{# => Set\{Int64\}(1,2,3,4,5,6)}
+\NormalTok{setdiff(}\DataTypeTok{Set}\NormalTok{([}\FloatTok{1}\NormalTok{,}\FloatTok{2}\NormalTok{,}\FloatTok{3}\NormalTok{,}\FloatTok{4}\NormalTok{]),}\DataTypeTok{Set}\NormalTok{([}\FloatTok{2}\NormalTok{,}\FloatTok{3}\NormalTok{,}\FloatTok{5}\NormalTok{])) }\CommentTok{# => Set\{Int64\}(1,4)}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\section{Control Flow}\label{control-flow}
+
+\begin{frame}[fragile]{Let's make a variable}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{some_var = }\FloatTok{5}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Here is an if statement. Indentation is not
+meaningful in Julia.}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{if} \NormalTok{some_var > }\FloatTok{10}
+    \NormalTok{println(}\StringTok{"some_var is totally bigger than 10."}\NormalTok{)}
+\KeywordTok{elseif} \NormalTok{some_var < }\FloatTok{10}    \CommentTok{# This elseif clause is optional.}
+    \NormalTok{println(}\StringTok{"some_var is smaller than 10."}\NormalTok{)}
+\KeywordTok{else}                    \CommentTok{# The else clause is optional too.}
+    \NormalTok{println(}\StringTok{"some_var is indeed 10."}\NormalTok{)}
+\KeywordTok{end}
+\CommentTok{# => prints "some var is smaller than 10"}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{For loops iterate over iterables.}
+
+Iterable types include \texttt{Range,\ Array,\ Set,\ Dict}, and
+\texttt{AbstractString}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{julia> }\KeywordTok{for} \NormalTok{animal=[}\StringTok{"dog"}\NormalTok{, }\StringTok{"cat"}\NormalTok{, }\StringTok{"mouse"}\NormalTok{]}
+    \NormalTok{println(}\StringTok{"$animal is a mammal"}\NormalTok{)}
+    \CommentTok{# You can use $ to interpolate variables or expression into strings}
+\NormalTok{enddog is a mammal}
+\NormalTok{cat is a mammal}
+\NormalTok{mouse is a mammal}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{You can use `in' instead of `='.}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{julia> }\KeywordTok{for} \NormalTok{animal }\KeywordTok{in} \NormalTok{[}\StringTok{"dog"}\NormalTok{, }\StringTok{"cat"}\NormalTok{, }\StringTok{"mouse"}\NormalTok{]}
+    \NormalTok{println(}\StringTok{"$animal is a mammal"}\NormalTok{)}
+\NormalTok{enddog is a mammal}
+\NormalTok{cat is a mammal}
+\NormalTok{mouse is a mammal}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Example}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{julia> }\KeywordTok{for} \NormalTok{a }\KeywordTok{in} \DataTypeTok{Dict}\NormalTok{(}\StringTok{"dog"}\NormalTok{=>}\StringTok{"mammal"}\NormalTok{,}\StringTok{"cat"}\NormalTok{=>}\StringTok{"mammal"}\NormalTok{,}\StringTok{"mouse"}\NormalTok{=>}\StringTok{"mammal"}\NormalTok{)}
+    \NormalTok{println(}\StringTok{"$(a[1]) is a $(a[2])"}\NormalTok{)}
+\NormalTok{endmouse is a mammal}
+\NormalTok{cat is a mammal}
+\NormalTok{dog is a mammal}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Example}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{julia> }\KeywordTok{for} \NormalTok{(k,v) }\KeywordTok{in} \DataTypeTok{Dict}\NormalTok{(}\StringTok{"dog"}\NormalTok{=>}\StringTok{"mammal"}\NormalTok{,}\StringTok{"cat"}\NormalTok{=>}\StringTok{"mammal"}\NormalTok{,}\StringTok{"mouse"}\NormalTok{=>}\StringTok{"mammal"}\NormalTok{)}
+    \NormalTok{println(}\StringTok{"$k is a $v"}\NormalTok{)}
+\NormalTok{endmouse is a mammal}
+\NormalTok{cat is a mammal}
+\NormalTok{dog is a mammal}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{While loops loop while a condition is true}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{julia> x = }\FloatTok{0}
+
+\FloatTok{0}
+\NormalTok{julia> }\KeywordTok{while} \NormalTok{x < }\FloatTok{4}
+    \NormalTok{println(x)}
+    \NormalTok{x += }\FloatTok{1}  \CommentTok{# Shorthand for x = x + 1}
+\NormalTok{end0}
+\FloatTok{1}
+\FloatTok{2}
+\FloatTok{3}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Handle exceptions with a try/catch block}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{try}
+   \NormalTok{error(}\StringTok{"help"}\NormalTok{)}
+\KeywordTok{catch} \NormalTok{e}
+   \NormalTok{println(}\StringTok{"caught it $e"}\NormalTok{)}
+\KeywordTok{end}
+\CommentTok{# => caught it ErrorException("help")}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\section{Functions}\label{functions}
+
+\begin{frame}[fragile]{The keyword `function' creates new functions}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{function} \NormalTok{name(arglist)}
+  \NormalTok{body...}
+\KeywordTok{end}
+
+\KeywordTok{function} \NormalTok{add(x, y)}
+    \NormalTok{println(}\StringTok{"x is $x and y is $y"}\NormalTok{)}
+
+    \CommentTok{# Functions return the value of their last statement}
+    \NormalTok{x + y}
+\KeywordTok{end}
+
+\NormalTok{add(}\FloatTok{5}\NormalTok{, }\FloatTok{6}\NormalTok{) }\CommentTok{# => 11 after printing out "x is 5 and y is 6"}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x is }\FloatTok{5} \NormalTok{and y is }\FloatTok{6}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Compact assignment of functions}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{f_add(x, y) = x + y }\CommentTok{# => "f (generic function with 1 method)"}
+\NormalTok{f_add(}\FloatTok{3}\NormalTok{, }\FloatTok{4}\NormalTok{) }\CommentTok{# => 7}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Function can also return multiple values as
+tuple}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{f(x, y) = x + y, x - y}
+\NormalTok{f(}\FloatTok{3}\NormalTok{, }\FloatTok{4}\NormalTok{) }\CommentTok{# => (7, -1)}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{You can define functions that take a variable
+number of positional arguments}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{function} \NormalTok{varargs(args...)}
+    \KeywordTok{return} \NormalTok{args}
+    \CommentTok{# use the keyword return to return anywhere in the function}
+\KeywordTok{end}
+\CommentTok{# => varargs (generic function with 1 method)}
+
+\NormalTok{varargs(}\FloatTok{1}\NormalTok{,}\FloatTok{2}\NormalTok{,}\FloatTok{3}\NormalTok{) }\CommentTok{# => (1,2,3)}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Splat}
+
+\begin{itemize}
+\tightlist
+\item
+  The \ldots{} is called a splat.
+\item
+  We just used it in a function definition.
+\item
+  It can also be used in a function call,
+\item
+  where it will splat an Array or Tuple's contents into the argument
+  list.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{add([}\FloatTok{5}\NormalTok{,}\FloatTok{6}\NormalTok{]...) }\CommentTok{# this is equivalent to add(5,6)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x is }\FloatTok{5} \NormalTok{and y is }\FloatTok{6}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+
+\NormalTok{x = (}\FloatTok{5}\NormalTok{,}\FloatTok{6}\NormalTok{)     }\CommentTok{# => (5,6)}
+\NormalTok{add(x...)     }\CommentTok{# this is equivalent to add(5,6)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x is }\FloatTok{5} \NormalTok{and y is }\FloatTok{6}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{You can define functions with optional positional
+arguments}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{function} \NormalTok{defaults(a,b,x=}\FloatTok{5}\NormalTok{,y=}\FloatTok{6}\NormalTok{)}
+    \KeywordTok{return} \StringTok{"$a $b and $x $y"}
+\KeywordTok{end}
+
+\NormalTok{defaults(}\CharTok{'h'}\NormalTok{,}\CharTok{'g'}\NormalTok{) }\CommentTok{# => "h g and 5 6"}
+\NormalTok{defaults(}\CharTok{'h'}\NormalTok{,}\CharTok{'g'}\NormalTok{,}\CharTok{'j'}\NormalTok{) }\CommentTok{# => "h g and j 6"}
+\NormalTok{defaults(}\CharTok{'h'}\NormalTok{,}\CharTok{'g'}\NormalTok{,}\CharTok{'j'}\NormalTok{,}\CharTok{'k'}\NormalTok{) }\CommentTok{# => "h g and j k"}
+\KeywordTok{try}
+    \NormalTok{defaults(}\CharTok{'h'}\NormalTok{) }\CommentTok{# => ERROR: no method defaults(Char,)}
+    \NormalTok{defaults() }\CommentTok{# => ERROR: no methods defaults()}
+\KeywordTok{catch} \NormalTok{e}
+    \NormalTok{println(e)}
+\KeywordTok{end}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{MethodError(Weave.ReportSandBox13.defaults,(}\CharTok{'h'}\NormalTok{,))}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{You can define functions that take keyword
+arguments}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{function} \NormalTok{keyword_args(;k1=}\FloatTok{4}\NormalTok{,name2=}\StringTok{"hello"}\NormalTok{) }\CommentTok{# note the ;}
+    \KeywordTok{return} \DataTypeTok{Dict}\NormalTok{(}\StringTok{"k1"}\NormalTok{=>k1,}\StringTok{"name2"}\NormalTok{=>name2)}
+\KeywordTok{end}
+
+\NormalTok{keyword_args(name2=}\StringTok{"ness"}\NormalTok{) }\CommentTok{# => ["name2"=>"ness","k1"=>4]}
+\NormalTok{keyword_args(k1=}\StringTok{"mine"}\NormalTok{) }\CommentTok{# => ["k1"=>"mine","name2"=>"hello"]}
+\NormalTok{keyword_args() }\CommentTok{# => ["name2"=>"hello","k1"=>4]}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{You can combine all kinds of arguments in the
+same function}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{function} \NormalTok{all_the_args(normal_arg, optional_positional_arg=}\FloatTok{2}\NormalTok{; keyword_arg=}\StringTok{"foo"}\NormalTok{)}
+    \NormalTok{println(}\StringTok{"normal arg: $normal_arg"}\NormalTok{)}
+    \NormalTok{println(}\StringTok{"optional arg: $optional_positional_arg"}\NormalTok{)}
+    \NormalTok{println(}\StringTok{"keyword arg: $keyword_arg"}\NormalTok{)}
+\KeywordTok{end}
+
+\NormalTok{all_the_args(}\FloatTok{1}\NormalTok{, }\FloatTok{3}\NormalTok{, keyword_arg=}\FloatTok{4}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{normal arg: }\FloatTok{1}
+\NormalTok{optional arg: }\FloatTok{3}
+\NormalTok{keyword arg: }\FloatTok{4}
+\end{Highlighting}
+\end{Shaded}
+
+prints:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#   normal arg: 1}
+\CommentTok{#   optional arg: 3}
+\CommentTok{#   keyword arg: 4}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Julia has first class functions}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{function} \NormalTok{create_adder(x)}
+    \NormalTok{adder = }\KeywordTok{function} \NormalTok{(y)}
+        \KeywordTok{return} \NormalTok{x + y}
+    \KeywordTok{end}
+    \KeywordTok{return} \NormalTok{adder}
+\KeywordTok{end}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{This is ``stabby lambda syntax'' for creating
+anonymous functions}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{(x -> x > }\FloatTok{2}\NormalTok{)(}\FloatTok{3}\NormalTok{) }\CommentTok{# => true}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{This function is identical to create\_adder
+implementation above.}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{function} \NormalTok{create_adder(x)}
+    \NormalTok{y -> x + y}
+\KeywordTok{end}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{You can also name the internal function, if you
+want}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{function} \NormalTok{create_adder(x)}
+    \KeywordTok{function} \NormalTok{adder(y)}
+        \NormalTok{x + y}
+    \KeywordTok{end}
+    \NormalTok{adder}
+\KeywordTok{end}
+
+\NormalTok{add_10 = create_adder(}\FloatTok{10}\NormalTok{)}
+\NormalTok{add_10(}\FloatTok{3}\NormalTok{) }\CommentTok{# => 13}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{There are built-in higher order functions}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{map(add_10, [}\FloatTok{1}\NormalTok{,}\FloatTok{2}\NormalTok{,}\FloatTok{3}\NormalTok{]) }\CommentTok{# => [11, 12, 13]}
+\NormalTok{filter(x -> x > }\FloatTok{5}\NormalTok{, [}\FloatTok{3}\NormalTok{, }\FloatTok{4}\NormalTok{, }\FloatTok{5}\NormalTok{, }\FloatTok{6}\NormalTok{, }\FloatTok{7}\NormalTok{]) }\CommentTok{# => [6, 7]}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{We can use list comprehensions for nicer maps}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{[add_10(i) }\KeywordTok{for} \NormalTok{i=[}\FloatTok{1}\NormalTok{, }\FloatTok{2}\NormalTok{, }\FloatTok{3}\NormalTok{]] }\CommentTok{# => [11, 12, 13]}
+\NormalTok{[add_10(i) }\KeywordTok{for} \NormalTok{i }\KeywordTok{in} \NormalTok{[}\FloatTok{1}\NormalTok{, }\FloatTok{2}\NormalTok{, }\FloatTok{3}\NormalTok{]] }\CommentTok{# => [11, 12, 13]}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\section{Types}\label{types}
+
+\begin{frame}[fragile]{Julia has a type system.}
+
+Every value has a type; variables do not have types themselves. You can
+use the \texttt{typeof} function to get the type of a value.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{typeof(}\FloatTok{5}\NormalTok{) }\CommentTok{# => Int64}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Types are first-class values}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{typeof(}\DataTypeTok{Int64}\NormalTok{) }\CommentTok{# => DataType}
+\NormalTok{typeof(DataType) }\CommentTok{# => DataType}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{DataType is the type that represents types,
+including itself.}
+
+\begin{itemize}
+\item
+  Types are used for documentation, optimizations, and dispatch.
+\item
+  They are not statically checked.
+\item
+  Users can define types
+\item
+  They are like records or structs in other languages.
+\item
+  New types are defined using the \texttt{type} keyword.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{type Name}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{type} \NormalTok{Name}
+   \NormalTok{field::OptionalType}
+   \NormalTok{...}
+\KeywordTok{end}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{type} \NormalTok{Tiger}
+  \NormalTok{taillength::}\DataTypeTok{Float64}
+  \NormalTok{coatcolor }\CommentTok{# not including a type annotation is the same as `::Any`}
+\KeywordTok{end}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{The default constructor's arguments}
+
+are the properties of the type, in the order they are listed in the
+definition
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{tigger = Tiger(}\FloatTok{3.5}\NormalTok{,}\StringTok{"orange"}\NormalTok{) }\CommentTok{# => Tiger(3.5,"orange")}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{The type doubles as the constructor function for
+values of that type}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{sherekhan = typeof(tigger)(}\FloatTok{5.6}\NormalTok{,}\StringTok{"fire"}\NormalTok{) }\CommentTok{# => Tiger(5.6,"fire")}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}{Remark}
+
+\begin{itemize}
+\tightlist
+\item
+  These struct-style types are called concrete types
+\item
+  They can be instantiated, but cannot have subtypes.
+\item
+  The other kind of types is abstract types.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{abstract Name}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{abstract} \NormalTok{Cat }\CommentTok{# just a name and point in the type hierarchy}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Abstract types cannot be instantiated, but can
+have subtypes.}
+
+For example, \texttt{Number} is an abstract type
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{subtypes(}\DataTypeTok{Number}\NormalTok{) }\CommentTok{# => 2-element Array\{Any,1\}:}
+                 \CommentTok{#     Complex\{T<:Real\}}
+                 \CommentTok{#     Real}
+\NormalTok{subtypes(Cat) }\CommentTok{# => 0-element Array\{Any,1\}}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{AbstractString, as the name implies, is also an
+abstract type}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{subtypes(AbstractString)    }\CommentTok{# 8-element Array\{Any,1\}:}
+                            \CommentTok{#  Base.SubstitutionString\{T<:AbstractString\}}
+                            \CommentTok{#  DirectIndexString}
+                            \CommentTok{#  RepString}
+                            \CommentTok{#  RevString\{T<:AbstractString\}}
+                            \CommentTok{#  RopeString}
+                            \CommentTok{#  SubString\{T<:AbstractString\}}
+                            \CommentTok{#  UTF16String}
+                            \CommentTok{#  UTF8String}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Every type has a \texttt{super} type; use the
+\texttt{super} function to get it.}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{typeof(}\FloatTok{5}\NormalTok{) }\CommentTok{# => Int64}
+\NormalTok{super(}\DataTypeTok{Int64}\NormalTok{) }\CommentTok{# => Signed}
+\NormalTok{super(}\DataTypeTok{Signed}\NormalTok{) }\CommentTok{# => Integer}
+\NormalTok{super(}\DataTypeTok{Integer}\NormalTok{) }\CommentTok{# => Real}
+\NormalTok{super(}\DataTypeTok{Real}\NormalTok{) }\CommentTok{# => Number}
+\NormalTok{super(}\DataTypeTok{Number}\NormalTok{) }\CommentTok{# => Any}
+\NormalTok{super(super(}\DataTypeTok{Signed}\NormalTok{)) }\CommentTok{# => Real}
+\NormalTok{super(}\DataTypeTok{Any}\NormalTok{) }\CommentTok{# => Any}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{All of these type, except for \texttt{Int64}, are
+\texttt{abstract}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{typeof(}\StringTok{"fire"}\NormalTok{) }\CommentTok{# => ASCIIString}
+\NormalTok{super(}\DataTypeTok{ASCIIString}\NormalTok{) }\CommentTok{# => DirectIndexString}
+\NormalTok{super(DirectIndexString) }\CommentTok{# => AbstractString}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Likewise here with \texttt{ASCIIString}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# <: is the subtyping operator}
+\KeywordTok{type} \NormalTok{Lion <: Cat }\CommentTok{# Lion is a subtype of Cat}
+  \NormalTok{mane_color}
+  \NormalTok{roar::AbstractString}
+\KeywordTok{end}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{Constructors}
+
+\begin{itemize}
+\tightlist
+\item
+  You can define more constructors for your type
+\item
+  Just define a function of the same name as the type
+\item
+  and call an existing constructor to get a value of the correct type
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Lion(roar::AbstractString) = Lion(}\StringTok{"green"}\NormalTok{,roar)}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{This is an outer constructor because it's outside
+the type definition}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{type} \NormalTok{Panther <: Cat }\CommentTok{# Panther is also a subtype of Cat}
+  \NormalTok{eye_color}
+  \NormalTok{Panther() = new(}\StringTok{"green"}\NormalTok{)}
+  \CommentTok{# Panthers will only have this constructor, and no default constructor.}
+\KeywordTok{end}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}{Using inner constructors,}
+
+\begin{itemize}
+\item
+  like Panther does, gives you control over how values of the type can
+  be created.
+\item
+  When possible, you should use outer constructors rather than inner
+  ones.
+\end{itemize}
+
+\end{frame}
+
+\end{document}

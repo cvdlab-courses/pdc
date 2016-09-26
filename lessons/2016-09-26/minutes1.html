@@ -626,145 +626,432 @@ div(<span class="fl">5</span>, <span class="fl">2</span>); <span class="co"># =&
 <span class="fl">2</span> &gt;&gt;&gt; <span class="fl">1</span>; <span class="co"># =&gt; 1 # logical shift right</span>
 <span class="fl">2</span> &gt;&gt; <span class="fl">1</span> ; <span class="co"># =&gt; 1 # arithmetic shift right</span>
 <span class="fl">2</span> &lt;&lt; <span class="fl">1</span> ; <span class="co"># =&gt; 4 # logical/arithmetic shift left</span></code></pre></div>
-<h1 id="section"></h1>
-<h1 id="section-1"></h1>
-<h1 id="boolean-values-are-primitives">## Boolean values are primitives</h1>
-<h1 id="julia-true-false"><code>{julia} # true # false #</code></h1>
-<h1 id="section-2"></h1>
-<h1 id="section-3"></h1>
-<h1 id="section-4"></h1>
-<h1 id="section-5"></h1>
-<h1 id="boolean-operators">## Boolean operators</h1>
-<h1 id="julia-true-false-false-true-1-1-true-2-1-false-1-1-false-2-1-true-1-10-true-1-10-false-2-2-true-2-2-true"><code>{julia} # !true; # =&gt; false # !false; # =&gt; true # 1 == 1; # =&gt; true # 2 == 1; # =&gt; false # 1 != 1; # =&gt; false # 2 != 1; # =&gt; true # 1 &lt; 10; # =&gt; true # 1 &gt; 10; # =&gt; false # 2 &lt;= 2; # =&gt; true # 2 &gt;= 2; # =&gt; true #</code></h1>
-<h1 id="section-6"></h1>
-<h1 id="section-7"></h1>
-<h1 id="section-8"></h1>
-<h1 id="section-9"></h1>
-<h1 id="section-10"></h1>
-<h1 id="comparisons-can-be-chained">## Comparisons can be chained</h1>
-<h1 id="julia-1-2-3-true-2-3-2-false"><code>{julia} # 1 &lt; 2 &lt; 3; # =&gt; true # 2 &lt; 3 &lt; 2; # =&gt; false #</code></h1>
-<h1 id="section-11"></h1>
-<h1 id="section-12"></h1>
-<h1 id="section-13"></h1>
-<h1 id="section-14"></h1>
-<h1 id="section-15"></h1>
-<h1 id="section-16"></h1>
-<h1 id="strings-are-created-with">## Strings are created with &quot;</h1>
-<h1 id="julia-this-is-a-string."><code>{julia} # &quot;This is a string.&quot; #</code></h1>
-<h1 id="section-17"></h1>
-<h1 id="section-18"></h1>
-<h1 id="section-19"></h1>
-<h1 id="section-20"></h1>
-<h1 id="section-21"></h1>
-<h1 id="julia-has-several-types-of-strings-including-asciistring-and-utf8string.">Julia has several types of strings, including ASCIIString and UTF8String.</h1>
-<h1 id="more-on-this-in-the-types-section.">More on this in the Types section.</h1>
-<h1 id="section-22"></h1>
-<h1 id="character-literals-are-written-with">### Character literals are written with '</h1>
-<h1 id="julia-a"><code>{julia} # 'a' #</code></h1>
-<h1 id="section-23"></h1>
-<h1 id="section-24"></h1>
-<h1 id="section-25"></h1>
-<h1 id="section-26"></h1>
-<h1 id="section-27"></h1>
-<h1 id="some-strings-can-be-indexed-like-an-array-of-characters">### Some strings can be indexed like an array of characters</h1>
-<h1 id="julia-this-is-a-string1-t-julia-indexes-from-1"><code>{julia} # &quot;This is a string&quot;[1]; # =&gt; 'T' # Julia indexes from 1 #</code></h1>
-<h1 id="section-28"></h1>
-<h1 id="section-29"></h1>
-<h1 id="section-30"></h1>
-<h1 id="section-31"></h1>
-<h1 id="section-32"></h1>
-<h1 id="section-33"></h1>
-<h1 id="however-this-is-will-not-work-well-for-utf8-strings">### However, this is will not work well for UTF8 strings,</h1>
-<h1 id="so-iterating-over-strings-is-recommended-map-for-loops-etc.">so iterating over strings is recommended (map, for loops, etc).</h1>
-<h1 id="section-34"></h1>
-<h1 id="can-be-used-for-string-interpolation">## $ can be used for string interpolation:</h1>
-<h1 id="julia-2-2-2-2-2-2-4"><code>{julia} # &quot;2 + 2 = $(2 + 2)&quot;; # =&gt; &quot;2 + 2 = 4&quot; #</code></h1>
-<h1 id="section-35"></h1>
-<h1 id="section-36"></h1>
-<h1 id="section-37"></h1>
-<h1 id="section-38"></h1>
-<h1 id="section-39"></h1>
-<h1 id="section-40"></h1>
-<h1 id="you-can-put-any-julia-expression-inside-the-parentheses.">### You can put any Julia expression inside the parentheses.</h1>
-<h1 id="section-41"></h1>
-<h1 id="another-way-to-format-strings-is-the-printf-macro.">### Another way to format strings is the printf macro.</h1>
-<h1 id="julia-printf-d-is-less-than-f-4.5-5.3-5-is-less-than-5.300000"><code>{julia} # @printf &quot;%d is less than %f&quot; 4.5 5.3 # 5 is less than 5.300000 #</code></h1>
-<h1 id="section-42"></h1>
-<h1 id="section-43"></h1>
-<h1 id="julia-5-is-less-than-5.300000"><code>{julia} # 5 is less than 5.300000 #</code></h1>
-<h1 id="section-44"></h1>
-<h1 id="section-45"></h1>
-<h1 id="section-46"></h1>
-<h1 id="section-47"></h1>
-<h1 id="section-48"></h1>
-<h1 id="section-49"></h1>
-<h1 id="printing-is-easy">## Printing is easy</h1>
-<h1 id="julia-printlnim-julia.-nice-to-meet-you"><code>{julia} # println(&quot;I'm Julia. Nice to meet you!&quot;) #</code></h1>
-<h1 id="section-50"></h1>
-<h1 id="section-51"></h1>
-<h1 id="julia-im-julia.-nice-to-meet-you"><code>{julia} # I'm Julia. Nice to meet you! #</code></h1>
-<h1 id="section-52"></h1>
-<h1 id="section-53"></h1>
-<h1 id="section-54"></h1>
-<h1 id="section-55"></h1>
-<h1 id="section-56"></h1>
-<h1 id="section-57"></h1>
-<h1 id="string-can-be-compared-lexicographically">## String can be compared lexicographically</h1>
-<h1 id="julia-good-bye-true-good-good-true-1-2-3-1-2-12-true"><code>{julia} # &quot;good&quot; &gt; &quot;bye&quot;; # =&gt; true # &quot;good&quot; == &quot;good&quot;; # =&gt; true # &quot;1 + 2 = 3&quot; == &quot;1 + 2 = $(1+2)&quot;; # =&gt; true #</code></h1>
-<h1 id="section-58"></h1>
-<h1 id="section-59"></h1>
-<h1 id="section-60"></h1>
-<h1 id="section-61"></h1>
-<h1 id="section-62"></h1>
-<h1 id="section-63"></h1>
-<h1 id="variables-and-collections"># Variables and Collections</h1>
-<h1 id="section-64"></h1>
-<h1 id="you-dont-declare-variables-before-assigning-to-them.">## You don't declare variables before assigning to them.</h1>
-<h1 id="julia-some_var-5-5-some_var-5"><code>{julia} # some_var = 5 # =&gt; 5 # some_var # =&gt; 5 #</code></h1>
-<h1 id="section-65"></h1>
-<h1 id="section-66"></h1>
-<h1 id="section-67"></h1>
-<h1 id="section-68"></h1>
-<h1 id="section-69"></h1>
-<h1 id="accessing-a-previously-unassigned-variable-is-an-error">## Accessing a previously unassigned variable is an error</h1>
-<h1 id="julia-try-some_other_var-error-some_other_var-not-defined-catch-e-printlne-end"><code>{julia} # try #     some_other_var # =&gt; ERROR: some_other_var not defined # catch e #     println(e) # end #</code></h1>
-<h1 id="section-70"></h1>
-<h1 id="section-71"></h1>
-<h1 id="julia-undefvarerrorsome_other_var"><code>{julia} # UndefVarError(:some_other_var) #</code></h1>
-<h1 id="section-72"></h1>
-<h1 id="section-73"></h1>
-<h1 id="section-74"></h1>
-<h1 id="section-75"></h1>
-<h1 id="section-76"></h1>
-<h1 id="section-77"></h1>
-<h1 id="variable-names-start-with-a-letter-or-underscore.">## Variable names start with a letter or underscore.</h1>
-<h1 id="after-that-you-can-use-letters-digits-underscores-and-exclamation-points.">After that, you can use letters, digits, underscores, and exclamation points.</h1>
-<h1 id="julia-someothervar123-6-6"><code>{julia} # SomeOtherVar123! = 6 # =&gt; 6 #</code></h1>
-<h1 id="section-78"></h1>
-<h1 id="section-79"></h1>
-<h1 id="section-80"></h1>
-<h1 id="section-81"></h1>
-<h1 id="section-82"></h1>
-<h1 id="you-can-also-use-certain-unicode-characters">## You can also use certain unicode characters</h1>
-<h1 id="section-83"></h1>
-<h1 id="julia-8-8"><code>{julia} # ☃ = 8 # =&gt; 8 #</code></h1>
-<h1 id="section-84"></h1>
-<h1 id="section-85"></h1>
-<h1 id="section-86"></h1>
-<h1 id="section-87"></h1>
-<h1 id="section-88"></h1>
-<h1 id="these-are-especially-handy-for-mathematical-notation">These are especially handy for mathematical notation</h1>
-<h1 id="section-89"></h1>
-<h1 id="julia-2-π-6.283185307179586"><code>{julia} # 2 * π # =&gt; 6.283185307179586 #</code></h1>
-<h1 id="section-90"></h1>
-<h1 id="section-91"></h1>
-<h1 id="section-92"></h1>
-<h1 id="section-93"></h1>
-<h1 id="section-94"></h1>
-<h1 id="section-95"></h1>
-<h1 id="a-note-on-naming-conventions-in-julia">## A note on naming conventions in Julia:</h1>
-<h1 id="section-96"></h1>
-<h1 id="word-separation-can-be-indicated-by-underscores-_-but-use-of-underscores-is-discouraged-unless-the-name-would-be-hard-to-read-otherwise.-names-of-types-begin-with-a-capital-letter-and-word-separation-is-shown-with-camelcase-instead-of-underscores.-names-of-functions-and-macros-are-in-lower-case-without-underscores.-functions-that-modify-their-inputs-have-names-that-end-in-.-these-functions-are-sometimes-called-mutating-functions-or-in-place-functions.-arrays-store-a-sequence-of-values-indexed-by-integers-1-through-n-julia-julia-a-int64-0-element-arrayint641-1-dimensional-array-literals-can-be-written-with-comma-separated-values.-julia-julia-b-4-5-6-3-element-arrayint641-4-5-6-julia-b-4-5-6-3-element-arrayint641-4-5-6-julia-b1-4-julia-bend-6-2-dimensional-arrays-use-space-separated-values-and-semicolon-separated-rows.-julia-julia-matrix-1-2-3-4-2x2-arrayint642-1-2-3-4-arrays-of-a-particular-type-julia-julia-b-int84-5-6-3-element-arrayint81-4-5-6-add-stuff-to-the-end-of-a-list-with-push-and-append-julia-a-pusha1-1-pusha2-12-pusha4-124-pusha3-1243-appendab-1243456-remove-from-the-end-with-pop-julia-popb-6-and-b-is-now-45-lets-put-it-back-julia-pushb6-b-is-now-456-again.-a1-1-remember-that-julia-indexes-from-1-not-0-end-is-a-shorthand-for-the-last-index.-it-can-be-used-in-any-indexing-expression-julia-aend-6-we-also-have-shift-and-unshift-julia-shifta-1-and-a-is-now-243456-unshifta7-7243456-function-names-that-end-in-exclamations-points-indicate-that-they-modify-their-argument-julia-arr-546-3-element-int64-array-546-sortarr-456-arr-is-still-546-sortarr-456-arr-is-now-456-looking-out-of-bounds-is-a-boundserror-julia-try-a0-error-boundserror-in-getindex-at-array.jl270-aend1-error-boundserror-in-getindex-at-array.jl270-catch-e-printlne-end-julia-boundserrorint640-errors-list-the-line-and-file-they-came-from-even-if-its-in-the-standard-library.-if-you-built-julia-from-source-you-can-look-in-the-folder-base-inside-the-julia-folder-to-find-these-files.-you-can-initialize-arrays-from-ranges-julia-a-15-5-element-int64-array-12345-you-can-look-at-ranges-with-slice-syntax.-julia-a13-1-2-3-a2end-2-3-4-5-remove-elements-from-an-array-by-index-with-splice-julia-arr-345-splicearr2-4-arr-is-now-35-concatenate-lists-with-append-julia-b-123-appendab-now-a-is-1-2-3-4-5-1-2-3-check-for-existence-in-a-list-with-in-julia-in1-a-true-examine-the-length-with-length-julia-lengtha-8-tuples-are-immutable.-julia-tup-1-2-3-123-an-int64int64int64-tuple.-tup1-1-try-tup1-3-error-no-method-setindexint64int64int64int64int64-catch-e-printlne-end-julia-methoderrorsetindextup31-many-list-functions-also-work-on-tuples-julia-lengthtup-3-tup12-12-in2-tup-true-you-can-unpack-tuples-into-variables-julia-a-b-c-1-2-3-123-a-is-now-1-b-is-now-2-and-c-is-now-3-tuples-are-created-even-if-you-leave-out-the-parentheses-julia-d-e-f-4-5-6-456-a-1-element-tuple-is-distinct-from-the-value-it-contains-julia-1-1-false-1-1-true-look-how-easy-it-is-to-swap-two-values-julia-e-d-d-e-54-d-is-now-5-and-e-is-now-4-dictionaries-store-mappings-julia-empty_dict-dict-dictanyany-you-can-create-a-dictionary-using-a-literal-julia-filled_dict-dictone-1-two-2-three-3-dictasciistringint64-look-up-values-with-julia-filled_dictone-1-get-all-keys-julia-keysfilled_dict-keyiteratordictasciistringint64three3one1two2-note-dictionary-keys-are-not-sorted-or-in-the-order-you-inserted-them.-get-all-values-julia-valuesfilled_dict-valueiteratordictasciistringint64three3one1two2-note---same-as-above-regarding-key-ordering.-check-for-existence-of-keys-in-a-dictionary-with-in-haskey-julia-inone-1-filled_dict-true-intwo-3-filled_dict-false-haskeyfilled_dict-one-true-haskeyfilled_dict-1-false-trying-to-look-up-a-non-existent-key-will-raise-an-error-julia-try-filled_dictfour-error-key-not-found-four-in-getindex-at-dict.jl489-catch-e-printlne-end-julia-undefvarerrorfilled_dict-use-the-get-method-to-avoid-that-error-by-providing-a-default-value-julia-getdictionarykeydefault_value-getfilled_dictone4-1-getfilled_dictfour4-4-use-sets-to-represent-collections-of-unordered-unique-values-julia-empty_set-set-setany-initialize-a-set-with-values-julia-filled_set-set12234-setint641234-add-more-values-to-a-set-julia-pushfilled_set5-setint6454231-check-if-the-values-are-in-the-set-julia-in2-filled_set-true-in10-filled_set-false-there-are-functions-for-set-intersection-union-and-difference.-julia-other_set-set3-4-5-6-setint646453-intersectfilled_set-other_set-setint64345-unionfilled_set-other_set-setint64123456-setdiffset1234set235-setint6414-control-flow-lets-make-a-variable-julia-some_var-5-here-is-an-if-statement.-indentation-is-not-meaningful-in-julia.-julia-if-some_var-10-printlnsome_var-is-totally-bigger-than-10.-elseif-some_var-10-this-elseif-clause-is-optional.-printlnsome_var-is-smaller-than-10.-else-the-else-clause-is-optional-too.-printlnsome_var-is-indeed-10.-end-prints-some-var-is-smaller-than-10-for-loops-iterate-over-iterables.-iterable-types-include-range-array-set-dict-and-abstractstring.-julia-julia-for-animaldog-cat-mouse-printlnanimal-is-a-mammal-you-can-use-to-interpolate-variables-or-expression-into-strings-enddog-is-a-mammal-cat-is-a-mammal-mouse-is-a-mammal-you-can-use-in-instead-of-.-julia-julia-for-animal-in-dog-cat-mouse-printlnanimal-is-a-mammal-enddog-is-a-mammal-cat-is-a-mammal-mouse-is-a-mammal-example-julia-julia-for-a-in-dictdogmammalcatmammalmousemammal-printlna1-is-a-a2-endmouse-is-a-mammal-cat-is-a-mammal-dog-is-a-mammal-example-julia-julia-for-kv-in-dictdogmammalcatmammalmousemammal-printlnk-is-a-v-endmouse-is-a-mammal-cat-is-a-mammal-dog-is-a-mammal-while-loops-loop-while-a-condition-is-true-julia-julia-x-0-0-julia-while-x-4-printlnx-x-1-shorthand-for-x-x-1-end0-1-2-3-handle-exceptions-with-a-trycatch-block-julia-try-errorhelp-catch-e-printlncaught-it-e-end-caught-it-errorexceptionhelp-functions-the-keyword-function-creates-new-functions-julia-function-namearglist-body...-end-function-addx-y-printlnx-is-x-and-y-is-y-functions-return-the-value-of-their-last-statement-x-y-end-add5-6-11-after-printing-out-x-is-5-and-y-is-6-julia-x-is-5-and-y-is-6-compact-assignment-of-functions-julia-f_addx-y-x-y-f-generic-function-with-1-method-f_add3-4-7-function-can-also-return-multiple-values-as-tuple-julia-fx-y-x-y-x---y-f3-4-7--1-you-can-define-functions-that-take-a-variable-number-of-positional-arguments-julia-function-varargsargs...-return-args-use-the-keyword-return-to-return-anywhere-in-the-function-end-varargs-generic-function-with-1-method-varargs123-123-splat-the-...-is-called-a-splat.-we-just-used-it-in-a-function-definition.-it-can-also-be-used-in-a-function-call-where-it-will-splat-an-array-or-tuples-contents-into-the-argument-list.-julia-add56...-this-is-equivalent-to-add56-julia-x-is-5-and-y-is-6-julia-x-56-56-addx...-this-is-equivalent-to-add56-julia-x-is-5-and-y-is-6-you-can-define-functions-with-optional-positional-arguments-julia-function-defaultsabx5y6-return-a-b-and-x-y-end-defaultshg-h-g-and-5-6-defaultshgj-h-g-and-j-6-defaultshgjk-h-g-and-j-k-try-defaultsh-error-no-method-defaultschar-defaults-error-no-methods-defaults-catch-e-printlne-end-julia-methoderrorweave.reportsandbox78.defaultsh-you-can-define-functions-that-take-keyword-arguments-julia-function-keyword_argsk14name2hello-note-the-return-dictk1k1name2name2-end-keyword_argsname2ness-name2nessk14-keyword_argsk1mine-k1minename2hello-keyword_args-name2hellok14-you-can-combine-all-kinds-of-arguments-in-the-same-function-julia-function-all_the_argsnormal_arg-optional_positional_arg2-keyword_argfoo-printlnnormal-arg-normal_arg-printlnoptional-arg-optional_positional_arg-printlnkeyword-arg-keyword_arg-end-all_the_args1-3-keyword_arg4-julia-normal-arg-1-optional-arg-3-keyword-arg-4-prints-julia-normal-arg-1-optional-arg-3-keyword-arg-4-julia-has-first-class-functions-julia-function-create_adderx-adder-function-y-return-x-y-end-return-adder-end-this-is-stabby-lambda-syntax-for-creating-anonymous-functions-julia-x---x-23-true-this-function-is-identical-to-create_adder-implementation-above.-julia-function-create_adderx-y---x-y-end-you-can-also-name-the-internal-function-if-you-want-julia-function-create_adderx-function-addery-x-y-end-adder-end-add_10-create_adder10-add_103-13-there-are-built-in-higher-order-functions-julia-mapadd_10-123-11-12-13-filterx---x-5-3-4-5-6-7-6-7-we-can-use-list-comprehensions-for-nicer-maps-julia-add_10i-for-i1-2-3-11-12-13-add_10i-for-i-in-1-2-3-11-12-13-types-julia-has-a-type-system.-every-value-has-a-type-variables-do-not-have-types-themselves.-you-can-use-the-typeof-function-to-get-the-type-of-a-value.-typeof5-int64-types-are-first-class-values-julia-evaltrue-typeofint64-datatype-typeofdatatype-datatype-datatype-is-the-type-that-represents-types-including-itself.-types-are-used-for-documentation-optimizations-and-dispatch.-they-are-not-statically-checked.-users-can-define-types-they-are-like-records-or-structs-in-other-languages.-new-types-are-defined-using-the-type-keyword.-type-name-julia-evaltrue-type-name-fieldoptionaltype-...-end-type-tiger-taillengthfloat64-coatcolor-not-including-a-type-annotation-is-the-same-as-any-end-the-default-constructors-arguments-are-the-properties-of-the-type-in-the-order-they-are-listed-in-the-definition-julia-evaltrue-tigger-tiger3.5orange-tiger3.5orange-the-type-doubles-as-the-constructor-function-for-values-of-that-type-julia-evaltrue-sherekhan-typeoftigger5.6fire-tiger5.6fire-remark-these-struct-style-types-are-called-concrete-types-they-can-be-instantiated-but-cannot-have-subtypes.-the-other-kind-of-types-is-abstract-types.-abstract-name-julia-evaltrue-abstract-cat-just-a-name-and-point-in-the-type-hierarchy-abstract-types-cannot-be-instantiated-but-can-have-subtypes.-for-example-number-is-an-abstract-type-julia-evaltrue-subtypesnumber-2-element-arrayany1-complextreal-real-subtypescat-0-element-arrayany1-abstractstring-as-the-name-implies-is-also-an-abstract-type-julia-evaltrue-subtypesabstractstring-8-element-arrayany1-base.substitutionstringtabstractstring-directindexstring-repstring-revstringtabstractstring-ropestring-substringtabstractstring-utf16string-utf8string-every-type-has-a-super-type-use-the-super-function-to-get-it.-julia-evaltrue-typeof5-int64-superint64-signed-supersigned-integer-superinteger-real-superreal-number-supernumber-any-supersupersigned-real-superany-any-all-of-these-type-except-for-int64-are-abstract.-julia-evaltrue-typeoffire-asciistring-superasciistring-directindexstring-superdirectindexstring-abstractstring-likewise-here-with-asciistring-julia-evaltrue-is-the-subtyping-operator-type-lion-cat-lion-is-a-subtype-of-cat-mane_color-roarabstractstring-end-constructors-you-can-define-more-constructors-for-your-type-just-define-a-function-of-the-same-name-as-the-type-and-call-an-existing-constructor-to-get-a-value-of-the-correct-type-julia-evaltrue-lionroarabstractstring-liongreenroar-this-is-an-outer-constructor-because-its-outside-the-type-definition-type-panther-cat-panther-is-also-a-subtype-of-cat-eye_color-panther-newgreen-panthers-will-only-have-this-constructor-and-no-default-constructor.-end-using-inner-constructors-like-panther-does-gives-you-control-over-how-values-of-the-type-can-be-created.-when-possible-you-should-use-outer-constructors-rather-than-inner-ones.">* Word separation can be indicated by underscores ('_'), but use of # underscores is discouraged unless the name would be hard to read # otherwise. # # * Names of Types begin with a capital letter and word separation is shown # with CamelCase instead of underscores. # # * Names of functions and macros are in lower case, without underscores. # # * Functions that modify their inputs have names that end in !. These # functions are sometimes called mutating functions or in-place functions. # # # # ## Arrays store a sequence of values indexed by integers 1 through n: # <code>{julia} # julia&gt; a = Int64[]  # 0-element Array{Int64,1} #</code> # # # # # # # ## 1-dimensional array literals can be written with comma-separated values. # <code>{julia} # julia&gt; b = [4, 5, 6] #  # 3-element Array{Int64,1}: #  4 #  5 #  6 # julia&gt; b = [4; 5; 6] #  # 3-element Array{Int64,1}: #  4 #  5 #  6 # julia&gt; b[1] #  # 4 # julia&gt; b[end] # 6 #</code> # # # # # # # ## 2-dimensional arrays use space-separated values and semicolon-separated rows. # <code>{julia} # julia&gt; matrix = [1 2; 3 4] # 2x2 Array{Int64,2}: #  1  2 #  3  4 #</code> # # # # # # # ## Arrays of a particular Type # <code>{julia} # julia&gt; b = Int8[4, 5, 6] # 3-element Array{Int8,1}: #  4 #  5 #  6 #</code> # # # # # # # ## Add stuff to the end of a list with push! and append! # <code>{julia} # a = [] # push!(a,1)     # =&gt; [1] # push!(a,2)     # =&gt; [1,2] # push!(a,4)     # =&gt; [1,2,4] # push!(a,3)     # =&gt; [1,2,4,3] # append!(a,b)   # =&gt; [1,2,4,3,4,5,6] #</code> # # # # # # ## Remove from the end with pop # <code>{julia} # pop!(b)        # =&gt; 6 and b is now [4,5] #</code> # # # # # # # ## Let's put it back # <code>{julia} # push!(b,6)   # b is now [4,5,6] again. # a[1] # =&gt; 1 # remember that Julia indexes from 1, not 0! #</code> # # # # # end is a shorthand for the last index. It can be used in any # indexing expression # <code>{julia} # a[end] # =&gt; 6 #</code> # # # # # # ## we also have shift and unshift # <code>{julia} # shift!(a) # =&gt; 1 and a is now [2,4,3,4,5,6] # unshift!(a,7) # =&gt; [7,2,4,3,4,5,6] #</code> # # # # # # ## Function names that end in exclamations points # # indicate that they modify # their argument # # <code>{julia} # arr = [5,4,6] # =&gt; 3-element Int64 Array: [5,4,6] # sort(arr) # =&gt; [4,5,6]; arr is still [5,4,6] # sort!(arr) # =&gt; [4,5,6]; arr is now [4,5,6] #</code> # # # # # # # ## Looking out of bounds is a BoundsError # <code>{julia} # try #     a[0] # =&gt; ERROR: BoundsError() in getindex at array.jl:270 #     a[end+1] # =&gt; ERROR: BoundsError() in getindex at array.jl:270 # catch e #     println(e) # end #</code> # # # <code>{julia} # BoundsError(Int64[],(0,)) #</code> # # # # # # # ## Errors list the line and file # # they came from, even if it's in the standard # library. If you built Julia from source, you can look in the folder base # inside the julia folder to find these files. # # ## You can initialize arrays from ranges # <code>{julia} # a = [1:5;] # =&gt; 5-element Int64 Array: [1,2,3,4,5] #</code> # # # # # # # ## You can look at ranges with slice syntax. # <code>{julia} # a[1:3] # =&gt; [1, 2, 3] # a[2:end] # =&gt; [2, 3, 4, 5] #</code> # # # # # # # ## Remove elements from an array by index with splice! # <code>{julia} # arr = [3,4,5] # splice!(arr,2) # =&gt; 4 ; arr is now [3,5] #</code> # # # # # # # ## Concatenate lists with append! # <code>{julia} # b = [1,2,3] # append!(a,b) # Now a is [1, 2, 3, 4, 5, 1, 2, 3] #</code> # # # # # # # ## Check for existence in a list with in # <code>{julia} # in(1, a) # =&gt; true #</code> # # # # # # # ## Examine the length with <code>length</code> # <code>{julia} # length(a) # =&gt; 8 #</code> # # # # # # # ## Tuples are immutable. # <code>{julia} # tup = (1, 2, 3) # =&gt; (1,2,3) # an (Int64,Int64,Int64) tuple. # tup[1] # =&gt; 1 # try: #     tup[1] = 3 # =&gt; ERROR: no method setindex!((Int64,Int64,Int64),Int64,Int64) # catch e #     println(e) # end #</code> # # # <code>{julia} # MethodError(setindex!,(:tup,3,1)) #</code> # # # # # # # ## Many list functions also work on tuples # <code>{julia} # length(tup) # =&gt; 3 # tup[1:2] # =&gt; (1,2) # in(2, tup) # =&gt; true #</code> # # # # # # # ## You can unpack tuples into variables # <code>{julia} # a, b, c = (1, 2, 3) # =&gt; (1,2,3)  # a is now 1, b is now 2 and c is now 3 #</code> # # # # # # # ## Tuples are created even if you leave out the parentheses # <code>{julia} # d, e, f = 4, 5, 6 # =&gt; (4,5,6) #</code> # # # # # # # ## A 1-element tuple is distinct from the value it contains # <code>{julia} # (1,) == 1 # =&gt; false # (1) == 1 # =&gt; true #</code> # # # # # # # ## Look how easy it is to swap two values # <code>{julia} # e, d = d, e  # =&gt; (5,4) # d is now 5 and e is now 4 #</code> # # # # # # # # ## Dictionaries store mappings # <code>{julia} # empty_dict = Dict() # =&gt; Dict{Any,Any}() #</code> # # # # # # # ## You can create a dictionary using a literal # <code>{julia} # filled_dict = Dict(&quot;one&quot;=&gt; 1, &quot;two&quot;=&gt; 2, &quot;three&quot;=&gt; 3) # # =&gt; Dict{ASCIIString,Int64} #</code> # # # # # # ## Look up values with <a href="#section-96"></a> # <code>{julia} # filled_dict[&quot;one&quot;] # =&gt; 1 #</code> # # # # # # ## Get all keys # <code>{julia} # keys(filled_dict) # # =&gt; KeyIterator{Dict{ASCIIString,Int64}}([&quot;three&quot;=&gt;3,&quot;one&quot;=&gt;1,&quot;two&quot;=&gt;2]) #</code> # # # # # ## Note # dictionary keys are not sorted or in the order you inserted them. # # # ## Get all values # <code>{julia} # values(filled_dict) # # =&gt; ValueIterator{Dict{ASCIIString,Int64}}([&quot;three&quot;=&gt;3,&quot;one&quot;=&gt;1,&quot;two&quot;=&gt;2]) #</code> # # # # # # ### Note - Same as above regarding key ordering. # # ## Check for existence of keys in a dictionary with in, haskey # <code>{julia} # in((&quot;one&quot; =&gt; 1), filled_dict) # =&gt; true # in((&quot;two&quot; =&gt; 3), filled_dict) # =&gt; false # haskey(filled_dict, &quot;one&quot;) # =&gt; true # haskey(filled_dict, 1) # =&gt; false #</code> # # # # # # ## Trying to look up a non-existent key will raise an error # <code>{julia} # try #     filled_dict[&quot;four&quot;] # =&gt; ERROR: key not found: four in getindex at dict.jl:489 # catch e #     println(e) # end #</code> # # # <code>{julia} # UndefVarError(:filled_dict) #</code> # # # # # # # ## Use the get method # to avoid that error by providing a default value # # <code>{julia} # get(dictionary,key,default_value) # get(filled_dict,&quot;one&quot;,4) # =&gt; 1 # get(filled_dict,&quot;four&quot;,4) # =&gt; 4 #</code> # # # # # # ## Use Sets to represent collections of unordered, unique values # <code>{julia} # empty_set = Set() # =&gt; Set{Any}() #</code> # # # # # # # ## Initialize a set with values # <code>{julia} # filled_set = Set([1,2,2,3,4]) # =&gt; Set{Int64}(1,2,3,4) #</code> # # # # # # # ## Add more values to a set # <code>{julia} # push!(filled_set,5) # =&gt; Set{Int64}(5,4,2,3,1) #</code> # # # # # # # ## Check if the values are in the set # <code>{julia} # in(2, filled_set) # =&gt; true # in(10, filled_set) # =&gt; false #</code> # # # # # # # ## There are functions for set intersection, union, and difference. # <code>{julia} # other_set = Set([3, 4, 5, 6]) # =&gt; Set{Int64}(6,4,5,3) # intersect(filled_set, other_set) # =&gt; Set{Int64}(3,4,5) # union(filled_set, other_set) # =&gt; Set{Int64}(1,2,3,4,5,6) # setdiff(Set([1,2,3,4]),Set([2,3,5])) # =&gt; Set{Int64}(1,4) #</code> # # # # # # # Control Flow # # ## Let's make a variable # <code>{julia} # some_var = 5 #</code> # # # # # # # ## Here is an if statement. Indentation is not meaningful in Julia. # <code>{julia} # if some_var &gt; 10 #     println(&quot;some_var is totally bigger than 10.&quot;) # elseif some_var &lt; 10    # This elseif clause is optional. #     println(&quot;some_var is smaller than 10.&quot;) # else                    # The else clause is optional too. #     println(&quot;some_var is indeed 10.&quot;) # end # # =&gt; prints &quot;some var is smaller than 10&quot; #</code> # # # # # # # ## For loops iterate over iterables. # # Iterable types include <code>Range, Array, Set, Dict</code>, and <code>AbstractString</code>. # # <code>{julia} # julia&gt; for animal=[&quot;dog&quot;, &quot;cat&quot;, &quot;mouse&quot;] #     println(&quot;$animal is a mammal&quot;) #     # You can use $ to interpolate variables or expression into strings # enddog is a mammal # cat is a mammal # mouse is a mammal #  #</code> # # # # # # # ## You can use 'in' instead of '='. # <code>{julia} # julia&gt; for animal in [&quot;dog&quot;, &quot;cat&quot;, &quot;mouse&quot;] #     println(&quot;$animal is a mammal&quot;) # enddog is a mammal # cat is a mammal # mouse is a mammal #  #</code> # # # # # # # # ## Example # <code>{julia} # julia&gt; for a in Dict(&quot;dog&quot;=&gt;&quot;mammal&quot;,&quot;cat&quot;=&gt;&quot;mammal&quot;,&quot;mouse&quot;=&gt;&quot;mammal&quot;) #     println(&quot;$(a[1]) is a $(a[2])&quot;) # endmouse is a mammal # cat is a mammal # dog is a mammal #  #</code> # # # # # # # ## Example # <code>{julia} # julia&gt; for (k,v) in Dict(&quot;dog&quot;=&gt;&quot;mammal&quot;,&quot;cat&quot;=&gt;&quot;mammal&quot;,&quot;mouse&quot;=&gt;&quot;mammal&quot;) #     println(&quot;$k is a $v&quot;) # endmouse is a mammal # cat is a mammal # dog is a mammal #  #</code> # # # # # # # # ## While loops loop while a condition is true # <code>{julia} # julia&gt; x = 0 #  # 0 # julia&gt; while x &lt; 4 #     println(x) #     x += 1  # Shorthand for x = x + 1 # end0 # 1 # 2 # 3 #  #</code> # # # # # # ## Handle exceptions with a try/catch block # <code>{julia} # try #    error(&quot;help&quot;) # catch e #    println(&quot;caught it $e&quot;) # end # # =&gt; caught it ErrorException(&quot;help&quot;) #</code> # # # # # # # # Functions # # ## The keyword 'function' creates new functions # # <code>{julia} # function name(arglist) #   body... # end #  # function add(x, y) #     println(&quot;x is $x and y is $y&quot;) #  #     # Functions return the value of their last statement #     x + y # end #  # add(5, 6) # =&gt; 11 after printing out &quot;x is 5 and y is 6&quot; #</code> # # # <code>{julia} # x is 5 and y is 6 #</code> # # # # # # # ## Compact assignment of functions # <code>{julia} # f_add(x, y) = x + y # =&gt; &quot;f (generic function with 1 method)&quot; # f_add(3, 4) # =&gt; 7 #</code> # # # # # # # ## Function can also return multiple values as tuple # <code>{julia} # f(x, y) = x + y, x - y # f(3, 4) # =&gt; (7, -1) #</code> # # # # # # ## You can define functions that take a variable number of # positional arguments # <code>{julia} # function varargs(args...) #     return args #     # use the keyword return to return anywhere in the function # end # # =&gt; varargs (generic function with 1 method) #  # varargs(1,2,3) # =&gt; (1,2,3) #</code> # # # # # # @@ Splat # # * The ... is called a splat. # * We just used it in a function definition. # * It can also be used in a function call, # * where it will splat an Array or Tuple's contents into the argument list. # <code>{julia} # add([5,6]...) # this is equivalent to add(5,6) #  #</code> # # # <code>{julia} # x is 5 and y is 6 #</code> # # # # <code>{julia} #  # x = (5,6)     # =&gt; (5,6) # add(x...)     # this is equivalent to add(5,6) #</code> # # # <code>{julia} # x is 5 and y is 6 #</code> # # # # # # # # ## You can define functions with optional positional arguments # <code>{julia} # function defaults(a,b,x=5,y=6) #     return &quot;$a $b and $x $y&quot; # end #  # defaults('h','g') # =&gt; &quot;h g and 5 6&quot; # defaults('h','g','j') # =&gt; &quot;h g and j 6&quot; # defaults('h','g','j','k') # =&gt; &quot;h g and j k&quot; # try #     defaults('h') # =&gt; ERROR: no method defaults(Char,) #     defaults() # =&gt; ERROR: no methods defaults() # catch e #     println(e) # end #</code> # # # <code>{julia} # MethodError(Weave.ReportSandBox78.defaults,('h',)) #</code> # # # # # # # ## You can define functions that take keyword arguments # <code>{julia} # function keyword_args(;k1=4,name2=&quot;hello&quot;) # note the ; #     return Dict(&quot;k1&quot;=&gt;k1,&quot;name2&quot;=&gt;name2) # end #  # keyword_args(name2=&quot;ness&quot;) # =&gt; [&quot;name2&quot;=&gt;&quot;ness&quot;,&quot;k1&quot;=&gt;4] # keyword_args(k1=&quot;mine&quot;) # =&gt; [&quot;k1&quot;=&gt;&quot;mine&quot;,&quot;name2&quot;=&gt;&quot;hello&quot;] # keyword_args() # =&gt; [&quot;name2&quot;=&gt;&quot;hello&quot;,&quot;k1&quot;=&gt;4] #</code> # # # # # # # ## You can combine all kinds of arguments in the same function # <code>{julia} # function all_the_args(normal_arg, optional_positional_arg=2; keyword_arg=&quot;foo&quot;) #     println(&quot;normal arg: $normal_arg&quot;) #     println(&quot;optional arg: $optional_positional_arg&quot;) #     println(&quot;keyword arg: $keyword_arg&quot;) # end #  # all_the_args(1, 3, keyword_arg=4) #</code> # # # <code>{julia} # normal arg: 1 # optional arg: 3 # keyword arg: 4 #</code> # # # # # # prints: # <code>{julia} # #   normal arg: 1 # #   optional arg: 3 # #   keyword arg: 4 #</code> # # # # # # ## Julia has first class functions # <code>{julia} # function create_adder(x) #     adder = function (y) #         return x + y #     end #     return adder # end #</code> # # # # # # # ## This is &quot;stabby lambda syntax&quot; for creating anonymous functions # <code>{julia} # (x -&gt; x &gt; 2)(3) # =&gt; true #</code> # # # # # # # ## This function is identical to create_adder implementation above. # <code>{julia} # function create_adder(x) #     y -&gt; x + y # end #</code> # # # # # # # ## You can also name the internal function, if you want # <code>{julia} # function create_adder(x) #     function adder(y) #         x + y #     end #     adder # end #  # add_10 = create_adder(10) # add_10(3) # =&gt; 13 #</code> # # # # # # # # ## There are built-in higher order functions # <code>{julia} # map(add_10, [1,2,3]) # =&gt; [11, 12, 13] # filter(x -&gt; x &gt; 5, [3, 4, 5, 6, 7]) # =&gt; [6, 7] #</code> # # # # # # # ## We can use list comprehensions for nicer maps # <code>{julia} # [add_10(i) for i=[1, 2, 3]] # =&gt; [11, 12, 13] # [add_10(i) for i in [1, 2, 3]] # =&gt; [11, 12, 13] #</code> # # # # # # # # Types # # ## Julia has a type system. # Every value has a type; variables do not have types themselves. # You can use the <code>typeof</code> function to get the type of a value. # # typeof(5) # =&gt; Int64 # # ## Types are first-class values # <code>{julia; eval=true} # typeof(Int64) # =&gt; DataType # typeof(DataType) # =&gt; DataType #  # ## DataType is the type that represents types, including itself. #  # *  Types are used for documentation, optimizations, and dispatch. # *  They are not statically checked. #  # *  Users can define types # *  They are like records or structs in other languages. # *  New types are defined using the `type` keyword. #  # ## type Name #  #</code>{julia; eval=true} # type Name # field::OptionalType # ... # end # # type Tiger # taillength::Float64 # coatcolor # not including a type annotation is the same as <code>::Any</code> # end # # ## The default constructor's arguments # are the properties # of the type, in the order they are listed in the definition # <code>{julia; eval=true} # tigger = Tiger(3.5,&quot;orange&quot;) # =&gt; Tiger(3.5,&quot;orange&quot;) #  # ## The type doubles as the constructor function for values of that type #</code>{julia; eval=true} # sherekhan = typeof(tigger)(5.6,&quot;fire&quot;) # =&gt; Tiger(5.6,&quot;fire&quot;) # # ## Remark # # * These struct-style types are called concrete types # * They can be instantiated, but cannot have subtypes. # * The other kind of types is abstract types. # # ## abstract Name # <code>{julia; eval=true} # abstract Cat # just a name and point in the type hierarchy #  # ## Abstract types cannot be instantiated, but can have subtypes. #  # For example, `Number` is an abstract type #</code>{julia; eval=true} # subtypes(Number) # =&gt; 2-element Array{Any,1}: # # Complex{T&lt;:Real} # # Real # subtypes(Cat) # =&gt; 0-element Array{Any,1} # # ## AbstractString, as the name implies, is also an abstract type # <code>{julia; eval=true} # subtypes(AbstractString)    # 8-element Array{Any,1}: #                             #  Base.SubstitutionString{T&lt;:AbstractString} #                             #  DirectIndexString #                             #  RepString #                             #  RevString{T&lt;:AbstractString} #                             #  RopeString #                             #  SubString{T&lt;:AbstractString} #                             #  UTF16String #                             #  UTF8String #  # ## Every type has a `super` type; use the `super` function to get it. #</code>{julia; eval=true} # typeof(5) # =&gt; Int64 # super(Int64) # =&gt; Signed # super(Signed) # =&gt; Integer # super(Integer) # =&gt; Real # super(Real) # =&gt; Number # super(Number) # =&gt; Any # super(super(Signed)) # =&gt; Real # super(Any) # =&gt; Any # # ## All of these type, except for <code>Int64</code>, are <code>abstract</code>. # <code>{julia; eval=true} # typeof(&quot;fire&quot;) # =&gt; ASCIIString # super(ASCIIString) # =&gt; DirectIndexString # super(DirectIndexString) # =&gt; AbstractString #  # ## Likewise here with `ASCIIString` #  #</code>{julia; eval=true} # # &lt;: is the subtyping operator # type Lion &lt;: Cat # Lion is a subtype of Cat # mane_color # roar::AbstractString # end # # ## Constructors # * You can define more constructors for your type # * Just define a function of the same name as the type # * and call an existing constructor to get a value of the correct type # # # ```{julia; eval=true} # # Lion(roar::AbstractString) = Lion(&quot;green&quot;,roar) # ## This is an outer constructor because it's outside the type definition # # type Panther &lt;: Cat # Panther is also a subtype of Cat # eye_color # Panther() = new(&quot;green&quot;) # # Panthers will only have this constructor, and no default constructor. # end # ## Using inner constructors, like Panther does, gives you control # ## over how values of the type can be created. # ## When possible, you should use outer constructors rather than inner ones. #</h1>
+<h2 id="boolean-values-are-primitives">Boolean values are primitives</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">true
+false</code></pre></div>
+<h2 id="boolean-operators">Boolean operators</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">!true; <span class="co"># =&gt; false</span>
+!false; <span class="co"># =&gt; true</span>
+<span class="fl">1</span> == <span class="fl">1</span>; <span class="co"># =&gt; true</span>
+<span class="fl">2</span> == <span class="fl">1</span>; <span class="co"># =&gt; false</span>
+<span class="fl">1</span> != <span class="fl">1</span>; <span class="co"># =&gt; false</span>
+<span class="fl">2</span> != <span class="fl">1</span>; <span class="co"># =&gt; true</span>
+<span class="fl">1</span> &lt; <span class="fl">10</span>; <span class="co"># =&gt; true</span>
+<span class="fl">1</span> &gt; <span class="fl">10</span>; <span class="co"># =&gt; false</span>
+<span class="fl">2</span> &lt;= <span class="fl">2</span>; <span class="co"># =&gt; true</span>
+<span class="fl">2</span> &gt;= <span class="fl">2</span>; <span class="co"># =&gt; true</span></code></pre></div>
+<h2 id="comparisons-can-be-chained">Comparisons can be chained</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="fl">1</span> &lt; <span class="fl">2</span> &lt; <span class="fl">3</span>; <span class="co"># =&gt; true</span>
+<span class="fl">2</span> &lt; <span class="fl">3</span> &lt; <span class="fl">2</span>; <span class="co"># =&gt; false</span></code></pre></div>
+<h2 id="strings-are-created-with">Strings are created with &quot;</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="st">&quot;This is a string.&quot;</span></code></pre></div>
+<p>Julia has several types of strings, including ASCIIString and UTF8String. More on this in the Types section.</p>
+<h3 id="character-literals-are-written-with">Character literals are written with '</h3>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="ch">'a'</span></code></pre></div>
+<h3 id="some-strings-can-be-indexed-like-an-array-of-characters">Some strings can be indexed like an array of characters</h3>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="st">&quot;This is a string&quot;</span>[<span class="fl">1</span>]; <span class="co"># =&gt; 'T' # Julia indexes from 1</span></code></pre></div>
+<h3 id="however-this-is-will-not-work-well-for-utf8-strings">However, this is will not work well for UTF8 strings,</h3>
+<p>so iterating over strings is recommended (map, for loops, etc).</p>
+<h2 id="can-be-used-for-string-interpolation">$ can be used for string interpolation:</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="st">&quot;2 + 2 = $(2 + 2)&quot;</span>; <span class="co"># =&gt; &quot;2 + 2 = 4&quot;</span></code></pre></div>
+<h3 id="you-can-put-any-julia-expression-inside-the-parentheses.">You can put any Julia expression inside the parentheses.</h3>
+<h3 id="another-way-to-format-strings-is-the-printf-macro.">Another way to format strings is the printf macro.</h3>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">@printf <span class="st">&quot;%d is less than %f&quot;</span> <span class="fl">4.5</span> <span class="fl">5.3</span> <span class="co"># 5 is less than 5.300000</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="fl">5</span> is less than <span class="fl">5.300000</span></code></pre></div>
+<h2 id="printing-is-easy">Printing is easy</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">println(<span class="st">&quot;I'm Julia. Nice to meet you!&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">I'm Julia. Nice to meet you!</code></pre></div>
+<h2 id="string-can-be-compared-lexicographically">String can be compared lexicographically</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="st">&quot;good&quot;</span> &gt; <span class="st">&quot;bye&quot;</span>; <span class="co"># =&gt; true</span>
+<span class="st">&quot;good&quot;</span> == <span class="st">&quot;good&quot;</span>; <span class="co"># =&gt; true</span>
+<span class="st">&quot;1 + 2 = 3&quot;</span> == <span class="st">&quot;1 + 2 = $(1+2)&quot;</span>; <span class="co"># =&gt; true</span></code></pre></div>
+<h1 id="variables-and-collections">Variables and Collections</h1>
+<h2 id="you-dont-declare-variables-before-assigning-to-them.">You don't declare variables before assigning to them.</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">some_var = <span class="fl">5</span> <span class="co"># =&gt; 5</span>
+some_var <span class="co"># =&gt; 5</span></code></pre></div>
+<h2 id="accessing-a-previously-unassigned-variable-is-an-error">Accessing a previously unassigned variable is an error</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="kw">try</span>
+    some_other_var <span class="co"># =&gt; ERROR: some_other_var not defined</span>
+<span class="kw">catch</span> e
+    println(e)
+<span class="kw">end</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">UndefVarError(:some_other_var)</code></pre></div>
+<h2 id="variable-names-start-with-a-letter-or-underscore.">Variable names start with a letter or underscore.</h2>
+<p>After that, you can use letters, digits, underscores, and exclamation points.</p>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">SomeOtherVar123! = <span class="fl">6</span> <span class="co"># =&gt; 6</span></code></pre></div>
+<h2 id="you-can-also-use-certain-unicode-characters">You can also use certain unicode characters</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">☃ = <span class="fl">8</span> <span class="co"># =&gt; 8</span></code></pre></div>
+<p>These are especially handy for mathematical notation</p>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="fl">2</span> * π <span class="co"># =&gt; 6.283185307179586</span></code></pre></div>
+<h2 id="a-note-on-naming-conventions-in-julia">A note on naming conventions in Julia:</h2>
+<ul>
+<li><p>Word separation can be indicated by underscores ('_'), but use of underscores is discouraged unless the name would be hard to read otherwise.</p></li>
+<li><p>Names of Types begin with a capital letter and word separation is shown with CamelCase instead of underscores.</p></li>
+<li><p>Names of functions and macros are in lower case, without underscores.</p></li>
+<li><p>Functions that modify their inputs have names that end in !. These functions are sometimes called mutating functions or in-place functions.</p></li>
+</ul>
+<h2 id="arrays-store-a-sequence-of-values-indexed-by-integers-1-through-n">Arrays store a sequence of values indexed by integers 1 through n:</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">julia&gt; a = <span class="dt">Int64</span>[] 
+<span class="fl">0</span>-element <span class="dt">Array</span>{<span class="dt">Int64</span>,<span class="fl">1</span>}</code></pre></div>
+<h2 id="dimensional-array-literals-can-be-written-with-comma-separated-values.">1-dimensional array literals can be written with comma-separated values.</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">julia&gt; b = [<span class="fl">4</span>, <span class="fl">5</span>, <span class="fl">6</span>]
+
+<span class="fl">3</span>-element <span class="dt">Array</span>{<span class="dt">Int64</span>,<span class="fl">1</span>}:
+ <span class="fl">4</span>
+ <span class="fl">5</span>
+ <span class="fl">6</span>
+julia&gt; b = [<span class="fl">4</span>; <span class="fl">5</span>; <span class="fl">6</span>]
+
+<span class="fl">3</span>-element <span class="dt">Array</span>{<span class="dt">Int64</span>,<span class="fl">1</span>}:
+ <span class="fl">4</span>
+ <span class="fl">5</span>
+ <span class="fl">6</span>
+julia&gt; b[<span class="fl">1</span>]
+
+<span class="fl">4</span>
+julia&gt; b[<span class="kw">end</span>]
+<span class="fl">6</span></code></pre></div>
+<h2 id="dimensional-arrays-use-space-separated-values-and-semicolon-separated-rows.">2-dimensional arrays use space-separated values and semicolon-separated rows.</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">julia&gt; matrix = [<span class="fl">1</span> <span class="fl">2</span>; <span class="fl">3</span> <span class="fl">4</span>]
+<span class="fl">2</span>x2 <span class="dt">Array</span>{<span class="dt">Int64</span>,<span class="fl">2</span>}:
+ <span class="fl">1</span>  <span class="fl">2</span>
+ <span class="fl">3</span>  <span class="fl">4</span></code></pre></div>
+<h2 id="arrays-of-a-particular-type">Arrays of a particular Type</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">julia&gt; b = <span class="dt">Int8</span>[<span class="fl">4</span>, <span class="fl">5</span>, <span class="fl">6</span>]
+<span class="fl">3</span>-element <span class="dt">Array</span>{<span class="dt">Int8</span>,<span class="fl">1</span>}:
+ <span class="fl">4</span>
+ <span class="fl">5</span>
+ <span class="fl">6</span></code></pre></div>
+<h2 id="add-stuff-to-the-end-of-a-list-with-push-and-append">Add stuff to the end of a list with push! and append!</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">a = []
+push!(a,<span class="fl">1</span>)     <span class="co"># =&gt; [1]</span>
+push!(a,<span class="fl">2</span>)     <span class="co"># =&gt; [1,2]</span>
+push!(a,<span class="fl">4</span>)     <span class="co"># =&gt; [1,2,4]</span>
+push!(a,<span class="fl">3</span>)     <span class="co"># =&gt; [1,2,4,3]</span>
+append!(a,b)   <span class="co"># =&gt; [1,2,4,3,4,5,6]</span></code></pre></div>
+<h2 id="remove-from-the-end-with-pop">Remove from the end with pop</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">pop!(b)        <span class="co"># =&gt; 6 and b is now [4,5]</span></code></pre></div>
+<h2 id="lets-put-it-back">Let's put it back</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">push!(b,<span class="fl">6</span>)   <span class="co"># b is now [4,5,6] again.</span>
+a[<span class="fl">1</span>] <span class="co"># =&gt; 1 # remember that Julia indexes from 1, not 0!</span></code></pre></div>
+<p>end is a shorthand for the last index. It can be used in any indexing expression</p>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">a[<span class="kw">end</span>] <span class="co"># =&gt; 6</span></code></pre></div>
+<h2 id="we-also-have-shift-and-unshift">we also have shift and unshift</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">shift!(a) <span class="co"># =&gt; 1 and a is now [2,4,3,4,5,6]</span>
+unshift!(a,<span class="fl">7</span>) <span class="co"># =&gt; [7,2,4,3,4,5,6]</span></code></pre></div>
+<h2 id="function-names-that-end-in-exclamations-points">Function names that end in exclamations points</h2>
+<p>indicate that they modify their argument</p>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">arr = [<span class="fl">5</span>,<span class="fl">4</span>,<span class="fl">6</span>] <span class="co"># =&gt; 3-element Int64 Array: [5,4,6]</span>
+sort(arr) <span class="co"># =&gt; [4,5,6]; arr is still [5,4,6]</span>
+sort!(arr) <span class="co"># =&gt; [4,5,6]; arr is now [4,5,6]</span></code></pre></div>
+<h2 id="looking-out-of-bounds-is-a-boundserror">Looking out of bounds is a BoundsError</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="kw">try</span>
+    a[<span class="fl">0</span>] <span class="co"># =&gt; ERROR: BoundsError() in getindex at array.jl:270</span>
+    a[<span class="kw">end</span>+<span class="fl">1</span>] <span class="co"># =&gt; ERROR: BoundsError() in getindex at array.jl:270</span>
+<span class="kw">catch</span> e
+    println(e)
+<span class="kw">end</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">BoundsError(<span class="dt">Int64</span>[],(<span class="fl">0</span>,))</code></pre></div>
+<h2 id="errors-list-the-line-and-file">Errors list the line and file</h2>
+<p>they came from, even if it's in the standard library. If you built Julia from source, you can look in the folder base inside the julia folder to find these files.</p>
+<h2 id="you-can-initialize-arrays-from-ranges">You can initialize arrays from ranges</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">a = [<span class="fl">1</span>:<span class="fl">5</span>;] <span class="co"># =&gt; 5-element Int64 Array: [1,2,3,4,5]</span></code></pre></div>
+<h2 id="you-can-look-at-ranges-with-slice-syntax.">You can look at ranges with slice syntax.</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">a[<span class="fl">1</span>:<span class="fl">3</span>] <span class="co"># =&gt; [1, 2, 3]</span>
+a[<span class="fl">2</span>:<span class="kw">end</span>] <span class="co"># =&gt; [2, 3, 4, 5]</span></code></pre></div>
+<h2 id="remove-elements-from-an-array-by-index-with-splice">Remove elements from an array by index with splice!</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">arr = [<span class="fl">3</span>,<span class="fl">4</span>,<span class="fl">5</span>]
+splice!(arr,<span class="fl">2</span>) <span class="co"># =&gt; 4 ; arr is now [3,5]</span></code></pre></div>
+<h2 id="concatenate-lists-with-append">Concatenate lists with append!</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">b = [<span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span>]
+append!(a,b) <span class="co"># Now a is [1, 2, 3, 4, 5, 1, 2, 3]</span></code></pre></div>
+<h2 id="check-for-existence-in-a-list-with-in">Check for existence in a list with in</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="kw">in</span>(<span class="fl">1</span>, a) <span class="co"># =&gt; true</span></code></pre></div>
+<h2 id="examine-the-length-with-length">Examine the length with <code>length</code></h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">length(a) <span class="co"># =&gt; 8</span></code></pre></div>
+<h2 id="tuples-are-immutable.">Tuples are immutable.</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">tup = (<span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>) <span class="co"># =&gt; (1,2,3) # an (Int64,Int64,Int64) tuple.</span>
+tup[<span class="fl">1</span>] <span class="co"># =&gt; 1</span>
+<span class="kw">try</span>:
+    tup[<span class="fl">1</span>] = <span class="fl">3</span> <span class="co"># =&gt; ERROR: no method setindex!((Int64,Int64,Int64),Int64,Int64)</span>
+<span class="kw">catch</span> e
+    println(e)
+<span class="kw">end</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">MethodError(setindex!,(:tup,<span class="fl">3</span>,<span class="fl">1</span>))</code></pre></div>
+<h2 id="many-list-functions-also-work-on-tuples">Many list functions also work on tuples</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">length(tup) <span class="co"># =&gt; 3</span>
+tup[<span class="fl">1</span>:<span class="fl">2</span>] <span class="co"># =&gt; (1,2)</span>
+<span class="kw">in</span>(<span class="fl">2</span>, tup) <span class="co"># =&gt; true</span></code></pre></div>
+<h2 id="you-can-unpack-tuples-into-variables">You can unpack tuples into variables</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">a, b, c = (<span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>) <span class="co"># =&gt; (1,2,3)  # a is now 1, b is now 2 and c is now 3</span></code></pre></div>
+<h2 id="tuples-are-created-even-if-you-leave-out-the-parentheses">Tuples are created even if you leave out the parentheses</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">d, e, f = <span class="fl">4</span>, <span class="fl">5</span>, <span class="fl">6</span> <span class="co"># =&gt; (4,5,6)</span></code></pre></div>
+<h2 id="a-1-element-tuple-is-distinct-from-the-value-it-contains">A 1-element tuple is distinct from the value it contains</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">(<span class="fl">1</span>,) == <span class="fl">1</span> <span class="co"># =&gt; false</span>
+(<span class="fl">1</span>) == <span class="fl">1</span> <span class="co"># =&gt; true</span></code></pre></div>
+<h2 id="look-how-easy-it-is-to-swap-two-values">Look how easy it is to swap two values</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">e, d = d, e  <span class="co"># =&gt; (5,4) # d is now 5 and e is now 4</span></code></pre></div>
+<h2 id="dictionaries-store-mappings">Dictionaries store mappings</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">empty_dict = <span class="dt">Dict</span>() <span class="co"># =&gt; Dict{Any,Any}()</span></code></pre></div>
+<h2 id="you-can-create-a-dictionary-using-a-literal">You can create a dictionary using a literal</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">filled_dict = <span class="dt">Dict</span>(<span class="st">&quot;one&quot;</span>=&gt; <span class="fl">1</span>, <span class="st">&quot;two&quot;</span>=&gt; <span class="fl">2</span>, <span class="st">&quot;three&quot;</span>=&gt; <span class="fl">3</span>)
+<span class="co"># =&gt; Dict{ASCIIString,Int64}</span></code></pre></div>
+<h2 id="look-up-values-with">Look up values with []</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">filled_dict[<span class="st">&quot;one&quot;</span>] <span class="co"># =&gt; 1</span></code></pre></div>
+<h2 id="get-all-keys">Get all keys</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">keys(filled_dict)
+<span class="co"># =&gt; KeyIterator{Dict{ASCIIString,Int64}}([&quot;three&quot;=&gt;3,&quot;one&quot;=&gt;1,&quot;two&quot;=&gt;2])</span></code></pre></div>
+<h2 id="note">Note</h2>
+<p>dictionary keys are not sorted or in the order you inserted them.</p>
+<h2 id="get-all-values">Get all values</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">values(filled_dict)
+<span class="co"># =&gt; ValueIterator{Dict{ASCIIString,Int64}}([&quot;three&quot;=&gt;3,&quot;one&quot;=&gt;1,&quot;two&quot;=&gt;2])</span></code></pre></div>
+<h3 id="note---same-as-above-regarding-key-ordering.">Note - Same as above regarding key ordering.</h3>
+<h2 id="check-for-existence-of-keys-in-a-dictionary-with-in-haskey">Check for existence of keys in a dictionary with in, haskey</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="kw">in</span>((<span class="st">&quot;one&quot;</span> =&gt; <span class="fl">1</span>), filled_dict) <span class="co"># =&gt; true</span>
+<span class="kw">in</span>((<span class="st">&quot;two&quot;</span> =&gt; <span class="fl">3</span>), filled_dict) <span class="co"># =&gt; false</span>
+haskey(filled_dict, <span class="st">&quot;one&quot;</span>) <span class="co"># =&gt; true</span>
+haskey(filled_dict, <span class="fl">1</span>) <span class="co"># =&gt; false</span></code></pre></div>
+<h2 id="trying-to-look-up-a-non-existent-key-will-raise-an-error">Trying to look up a non-existent key will raise an error</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="kw">try</span>
+    filled_dict[<span class="st">&quot;four&quot;</span>] <span class="co"># =&gt; ERROR: key not found: four in getindex at dict.jl:489</span>
+<span class="kw">catch</span> e
+    println(e)
+<span class="kw">end</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">UndefVarError(:filled_dict)</code></pre></div>
+<h2 id="use-the-get-method">Use the get method</h2>
+<p>to avoid that error by providing a default value</p>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">get(dictionary,key,default_value)
+get(filled_dict,<span class="st">&quot;one&quot;</span>,<span class="fl">4</span>) <span class="co"># =&gt; 1</span>
+get(filled_dict,<span class="st">&quot;four&quot;</span>,<span class="fl">4</span>) <span class="co"># =&gt; 4</span></code></pre></div>
+<h2 id="use-sets-to-represent-collections-of-unordered-unique-values">Use Sets to represent collections of unordered, unique values</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">empty_set = <span class="dt">Set</span>() <span class="co"># =&gt; Set{Any}()</span></code></pre></div>
+<h2 id="initialize-a-set-with-values">Initialize a set with values</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">filled_set = <span class="dt">Set</span>([<span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="fl">4</span>]) <span class="co"># =&gt; Set{Int64}(1,2,3,4)</span></code></pre></div>
+<h2 id="add-more-values-to-a-set">Add more values to a set</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">push!(filled_set,<span class="fl">5</span>) <span class="co"># =&gt; Set{Int64}(5,4,2,3,1)</span></code></pre></div>
+<h2 id="check-if-the-values-are-in-the-set">Check if the values are in the set</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="kw">in</span>(<span class="fl">2</span>, filled_set) <span class="co"># =&gt; true</span>
+<span class="kw">in</span>(<span class="fl">10</span>, filled_set) <span class="co"># =&gt; false</span></code></pre></div>
+<h2 id="there-are-functions-for-set-intersection-union-and-difference.">There are functions for set intersection, union, and difference.</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">other_set = <span class="dt">Set</span>([<span class="fl">3</span>, <span class="fl">4</span>, <span class="fl">5</span>, <span class="fl">6</span>]) <span class="co"># =&gt; Set{Int64}(6,4,5,3)</span>
+intersect(filled_set, other_set) <span class="co"># =&gt; Set{Int64}(3,4,5)</span>
+union(filled_set, other_set) <span class="co"># =&gt; Set{Int64}(1,2,3,4,5,6)</span>
+setdiff(<span class="dt">Set</span>([<span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="fl">4</span>]),<span class="dt">Set</span>([<span class="fl">2</span>,<span class="fl">3</span>,<span class="fl">5</span>])) <span class="co"># =&gt; Set{Int64}(1,4)</span></code></pre></div>
+<h1 id="control-flow">Control Flow</h1>
+<h2 id="lets-make-a-variable">Let's make a variable</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">some_var = <span class="fl">5</span></code></pre></div>
+<h2 id="here-is-an-if-statement.-indentation-is-not-meaningful-in-julia.">Here is an if statement. Indentation is not meaningful in Julia.</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="kw">if</span> some_var &gt; <span class="fl">10</span>
+    println(<span class="st">&quot;some_var is totally bigger than 10.&quot;</span>)
+<span class="kw">elseif</span> some_var &lt; <span class="fl">10</span>    <span class="co"># This elseif clause is optional.</span>
+    println(<span class="st">&quot;some_var is smaller than 10.&quot;</span>)
+<span class="kw">else</span>                    <span class="co"># The else clause is optional too.</span>
+    println(<span class="st">&quot;some_var is indeed 10.&quot;</span>)
+<span class="kw">end</span>
+<span class="co"># =&gt; prints &quot;some var is smaller than 10&quot;</span></code></pre></div>
+<h2 id="for-loops-iterate-over-iterables.">For loops iterate over iterables.</h2>
+<p>Iterable types include <code>Range, Array, Set, Dict</code>, and <code>AbstractString</code>.</p>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">julia&gt; <span class="kw">for</span> animal=[<span class="st">&quot;dog&quot;</span>, <span class="st">&quot;cat&quot;</span>, <span class="st">&quot;mouse&quot;</span>]
+    println(<span class="st">&quot;$animal is a mammal&quot;</span>)
+    <span class="co"># You can use $ to interpolate variables or expression into strings</span>
+enddog is a mammal
+cat is a mammal
+mouse is a mammal</code></pre></div>
+<h2 id="you-can-use-in-instead-of-.">You can use 'in' instead of '='.</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">julia&gt; <span class="kw">for</span> animal <span class="kw">in</span> [<span class="st">&quot;dog&quot;</span>, <span class="st">&quot;cat&quot;</span>, <span class="st">&quot;mouse&quot;</span>]
+    println(<span class="st">&quot;$animal is a mammal&quot;</span>)
+enddog is a mammal
+cat is a mammal
+mouse is a mammal</code></pre></div>
+<h2 id="example">Example</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">julia&gt; <span class="kw">for</span> a <span class="kw">in</span> <span class="dt">Dict</span>(<span class="st">&quot;dog&quot;</span>=&gt;<span class="st">&quot;mammal&quot;</span>,<span class="st">&quot;cat&quot;</span>=&gt;<span class="st">&quot;mammal&quot;</span>,<span class="st">&quot;mouse&quot;</span>=&gt;<span class="st">&quot;mammal&quot;</span>)
+    println(<span class="st">&quot;$(a[1]) is a $(a[2])&quot;</span>)
+endmouse is a mammal
+cat is a mammal
+dog is a mammal</code></pre></div>
+<h2 id="example-1">Example</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">julia&gt; <span class="kw">for</span> (k,v) <span class="kw">in</span> <span class="dt">Dict</span>(<span class="st">&quot;dog&quot;</span>=&gt;<span class="st">&quot;mammal&quot;</span>,<span class="st">&quot;cat&quot;</span>=&gt;<span class="st">&quot;mammal&quot;</span>,<span class="st">&quot;mouse&quot;</span>=&gt;<span class="st">&quot;mammal&quot;</span>)
+    println(<span class="st">&quot;$k is a $v&quot;</span>)
+endmouse is a mammal
+cat is a mammal
+dog is a mammal</code></pre></div>
+<h2 id="while-loops-loop-while-a-condition-is-true">While loops loop while a condition is true</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">julia&gt; x = <span class="fl">0</span>
+
+<span class="fl">0</span>
+julia&gt; <span class="kw">while</span> x &lt; <span class="fl">4</span>
+    println(x)
+    x += <span class="fl">1</span>  <span class="co"># Shorthand for x = x + 1</span>
+end0
+<span class="fl">1</span>
+<span class="fl">2</span>
+<span class="fl">3</span></code></pre></div>
+<h2 id="handle-exceptions-with-a-trycatch-block">Handle exceptions with a try/catch block</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="kw">try</span>
+   error(<span class="st">&quot;help&quot;</span>)
+<span class="kw">catch</span> e
+   println(<span class="st">&quot;caught it $e&quot;</span>)
+<span class="kw">end</span>
+<span class="co"># =&gt; caught it ErrorException(&quot;help&quot;)</span></code></pre></div>
+<h1 id="functions">Functions</h1>
+<h2 id="the-keyword-function-creates-new-functions">The keyword 'function' creates new functions</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="kw">function</span> name(arglist)
+  body...
+<span class="kw">end</span>
+
+<span class="kw">function</span> add(x, y)
+    println(<span class="st">&quot;x is $x and y is $y&quot;</span>)
+
+    <span class="co"># Functions return the value of their last statement</span>
+    x + y
+<span class="kw">end</span>
+
+add(<span class="fl">5</span>, <span class="fl">6</span>) <span class="co"># =&gt; 11 after printing out &quot;x is 5 and y is 6&quot;</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">x is <span class="fl">5</span> and y is <span class="fl">6</span></code></pre></div>
+<h2 id="compact-assignment-of-functions">Compact assignment of functions</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">f_add(x, y) = x + y <span class="co"># =&gt; &quot;f (generic function with 1 method)&quot;</span>
+f_add(<span class="fl">3</span>, <span class="fl">4</span>) <span class="co"># =&gt; 7</span></code></pre></div>
+<h2 id="function-can-also-return-multiple-values-as-tuple">Function can also return multiple values as tuple</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">f(x, y) = x + y, x - y
+f(<span class="fl">3</span>, <span class="fl">4</span>) <span class="co"># =&gt; (7, -1)</span></code></pre></div>
+<h2 id="you-can-define-functions-that-take-a-variable-number-of">You can define functions that take a variable number of</h2>
+<p>positional arguments</p>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="kw">function</span> varargs(args...)
+    <span class="kw">return</span> args
+    <span class="co"># use the keyword return to return anywhere in the function</span>
+<span class="kw">end</span>
+<span class="co"># =&gt; varargs (generic function with 1 method)</span>
+
+varargs(<span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span>) <span class="co"># =&gt; (1,2,3)</span></code></pre></div>
+<p>@@ Splat</p>
+<ul>
+<li>The ... is called a splat.</li>
+<li>We just used it in a function definition.</li>
+<li>It can also be used in a function call,</li>
+<li>where it will splat an Array or Tuple's contents into the argument list. ````julia add([5,6]...) # this is equivalent to add(5,6)</li>
+</ul>
+<p>````</p>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">x is <span class="fl">5</span> and y is <span class="fl">6</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">
+x = (<span class="fl">5</span>,<span class="fl">6</span>)     <span class="co"># =&gt; (5,6)</span>
+add(x...)     <span class="co"># this is equivalent to add(5,6)</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">x is <span class="fl">5</span> and y is <span class="fl">6</span></code></pre></div>
+<h2 id="you-can-define-functions-with-optional-positional-arguments">You can define functions with optional positional arguments</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="kw">function</span> defaults(a,b,x=<span class="fl">5</span>,y=<span class="fl">6</span>)
+    <span class="kw">return</span> <span class="st">&quot;$a $b and $x $y&quot;</span>
+<span class="kw">end</span>
+
+defaults(<span class="ch">'h'</span>,<span class="ch">'g'</span>) <span class="co"># =&gt; &quot;h g and 5 6&quot;</span>
+defaults(<span class="ch">'h'</span>,<span class="ch">'g'</span>,<span class="ch">'j'</span>) <span class="co"># =&gt; &quot;h g and j 6&quot;</span>
+defaults(<span class="ch">'h'</span>,<span class="ch">'g'</span>,<span class="ch">'j'</span>,<span class="ch">'k'</span>) <span class="co"># =&gt; &quot;h g and j k&quot;</span>
+<span class="kw">try</span>
+    defaults(<span class="ch">'h'</span>) <span class="co"># =&gt; ERROR: no method defaults(Char,)</span>
+    defaults() <span class="co"># =&gt; ERROR: no methods defaults()</span>
+<span class="kw">catch</span> e
+    println(e)
+<span class="kw">end</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">MethodError(Weave.ReportSandBox0.defaults,(<span class="ch">'h'</span>,))</code></pre></div>
+<h2 id="you-can-define-functions-that-take-keyword-arguments">You can define functions that take keyword arguments</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="kw">function</span> keyword_args(;k1=<span class="fl">4</span>,name2=<span class="st">&quot;hello&quot;</span>) <span class="co"># note the ;</span>
+    <span class="kw">return</span> <span class="dt">Dict</span>(<span class="st">&quot;k1&quot;</span>=&gt;k1,<span class="st">&quot;name2&quot;</span>=&gt;name2)
+<span class="kw">end</span>
+
+keyword_args(name2=<span class="st">&quot;ness&quot;</span>) <span class="co"># =&gt; [&quot;name2&quot;=&gt;&quot;ness&quot;,&quot;k1&quot;=&gt;4]</span>
+keyword_args(k1=<span class="st">&quot;mine&quot;</span>) <span class="co"># =&gt; [&quot;k1&quot;=&gt;&quot;mine&quot;,&quot;name2&quot;=&gt;&quot;hello&quot;]</span>
+keyword_args() <span class="co"># =&gt; [&quot;name2&quot;=&gt;&quot;hello&quot;,&quot;k1&quot;=&gt;4]</span></code></pre></div>
+<h2 id="you-can-combine-all-kinds-of-arguments-in-the-same-function">You can combine all kinds of arguments in the same function</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="kw">function</span> all_the_args(normal_arg, optional_positional_arg=<span class="fl">2</span>; keyword_arg=<span class="st">&quot;foo&quot;</span>)
+    println(<span class="st">&quot;normal arg: $normal_arg&quot;</span>)
+    println(<span class="st">&quot;optional arg: $optional_positional_arg&quot;</span>)
+    println(<span class="st">&quot;keyword arg: $keyword_arg&quot;</span>)
+<span class="kw">end</span>
+
+all_the_args(<span class="fl">1</span>, <span class="fl">3</span>, keyword_arg=<span class="fl">4</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">normal arg: <span class="fl">1</span>
+optional arg: <span class="fl">3</span>
+keyword arg: <span class="fl">4</span></code></pre></div>
+<p>prints:</p>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="co">#   normal arg: 1</span>
+<span class="co">#   optional arg: 3</span>
+<span class="co">#   keyword arg: 4</span></code></pre></div>
+<h2 id="julia-has-first-class-functions">Julia has first class functions</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="kw">function</span> create_adder(x)
+    adder = <span class="kw">function</span> (y)
+        <span class="kw">return</span> x + y
+    <span class="kw">end</span>
+    <span class="kw">return</span> adder
+<span class="kw">end</span></code></pre></div>
+<h2 id="this-is-stabby-lambda-syntax-for-creating-anonymous-functions">This is &quot;stabby lambda syntax&quot; for creating anonymous functions</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">(x -&gt; x &gt; <span class="fl">2</span>)(<span class="fl">3</span>) <span class="co"># =&gt; true</span></code></pre></div>
+<h2 id="this-function-is-identical-to-create_adder-implementation-above.">This function is identical to create_adder implementation above.</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="kw">function</span> create_adder(x)
+    y -&gt; x + y
+<span class="kw">end</span></code></pre></div>
+<h2 id="you-can-also-name-the-internal-function-if-you-want">You can also name the internal function, if you want</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="kw">function</span> create_adder(x)
+    <span class="kw">function</span> adder(y)
+        x + y
+    <span class="kw">end</span>
+    adder
+<span class="kw">end</span>
+
+add_10 = create_adder(<span class="fl">10</span>)
+add_10(<span class="fl">3</span>) <span class="co"># =&gt; 13</span></code></pre></div>
+<h2 id="there-are-built-in-higher-order-functions">There are built-in higher order functions</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">map(add_10, [<span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span>]) <span class="co"># =&gt; [11, 12, 13]</span>
+filter(x -&gt; x &gt; <span class="fl">5</span>, [<span class="fl">3</span>, <span class="fl">4</span>, <span class="fl">5</span>, <span class="fl">6</span>, <span class="fl">7</span>]) <span class="co"># =&gt; [6, 7]</span></code></pre></div>
+<h2 id="we-can-use-list-comprehensions-for-nicer-maps">We can use list comprehensions for nicer maps</h2>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">[add_10(i) <span class="kw">for</span> i=[<span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>]] <span class="co"># =&gt; [11, 12, 13]</span>
+[add_10(i) <span class="kw">for</span> i <span class="kw">in</span> [<span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>]] <span class="co"># =&gt; [11, 12, 13]</span></code></pre></div>
+<h1 id="types">Types</h1>
+<h2 id="julia-has-a-type-system.">Julia has a type system.</h2>
+<p>Every value has a type; variables do not have types themselves. You can use the <code>typeof</code> function to get the type of a value.</p>
+<p>typeof(5) # =&gt; Int64</p>
+<h2 id="types-are-first-class-values">Types are first-class values</h2>
+<p>```{julia; eval=true} typeof(Int64) # =&gt; DataType typeof(DataType) # =&gt; DataType</p>
+<h2 id="datatype-is-the-type-that-represents-types-including-itself.">DataType is the type that represents types, including itself.</h2>
+<ul>
+<li>Types are used for documentation, optimizations, and dispatch.</li>
+<li><p>They are not statically checked.</p></li>
+<li>Users can define types</li>
+<li>They are like records or structs in other languages.</li>
+<li><p>New types are defined using the <code>type</code> keyword.</p></li>
+</ul>
+<h2 id="type-name">type Name</h2>
+<p>```{julia; eval=true} type Name field::OptionalType ... end</p>
+<p>type Tiger taillength::Float64 coatcolor # not including a type annotation is the same as <code>::Any</code> end</p>
+<h2 id="the-default-constructors-arguments">The default constructor's arguments</h2>
+<p>are the properties of the type, in the order they are listed in the definition ```{julia; eval=true} tigger = Tiger(3.5,&quot;orange&quot;) # =&gt; Tiger(3.5,&quot;orange&quot;)</p>
+<h2 id="the-type-doubles-as-the-constructor-function-for-values-of-that-type">The type doubles as the constructor function for values of that type</h2>
+<p>```{julia; eval=true} sherekhan = typeof(tigger)(5.6,&quot;fire&quot;) # =&gt; Tiger(5.6,&quot;fire&quot;)</p>
+<h2 id="remark">Remark</h2>
+<ul>
+<li>These struct-style types are called concrete types</li>
+<li>They can be instantiated, but cannot have subtypes.</li>
+<li>The other kind of types is abstract types.</li>
+</ul>
+<h2 id="abstract-name">abstract Name</h2>
+<p>```{julia; eval=true} abstract Cat # just a name and point in the type hierarchy</p>
+<h2 id="abstract-types-cannot-be-instantiated-but-can-have-subtypes.">Abstract types cannot be instantiated, but can have subtypes.</h2>
+<p>For example, <code>Number</code> is an abstract type ```{julia; eval=true} subtypes(Number) # =&gt; 2-element Array{Any,1}: # Complex{T&lt;:Real} # Real subtypes(Cat) # =&gt; 0-element Array{Any,1}</p>
+<h2 id="abstractstring-as-the-name-implies-is-also-an-abstract-type">AbstractString, as the name implies, is also an abstract type</h2>
+<p>```{julia; eval=true} subtypes(AbstractString) # 8-element Array{Any,1}: # Base.SubstitutionString{T&lt;:AbstractString} # DirectIndexString # RepString # RevString{T&lt;:AbstractString} # RopeString # SubString{T&lt;:AbstractString} # UTF16String # UTF8String</p>
+<h2 id="every-type-has-a-super-type-use-the-super-function-to-get-it.">Every type has a <code>super</code> type; use the <code>super</code> function to get it.</h2>
+<p>```{julia; eval=true} typeof(5) # =&gt; Int64 super(Int64) # =&gt; Signed super(Signed) # =&gt; Integer super(Integer) # =&gt; Real super(Real) # =&gt; Number super(Number) # =&gt; Any super(super(Signed)) # =&gt; Real super(Any) # =&gt; Any</p>
+<h2 id="all-of-these-type-except-for-int64-are-abstract.">All of these type, except for <code>Int64</code>, are <code>abstract</code>.</h2>
+<p>```{julia; eval=true} typeof(&quot;fire&quot;) # =&gt; ASCIIString super(ASCIIString) # =&gt; DirectIndexString super(DirectIndexString) # =&gt; AbstractString</p>
+<h2 id="likewise-here-with-asciistring">Likewise here with <code>ASCIIString</code></h2>
+<p>```{julia; eval=true} # &lt;: is the subtyping operator type Lion &lt;: Cat # Lion is a subtype of Cat mane_color roar::AbstractString end</p>
+<h2 id="constructors">Constructors</h2>
+<ul>
+<li>You can define more constructors for your type</li>
+<li>Just define a function of the same name as the type</li>
+<li>and call an existing constructor to get a value of the correct type</li>
+</ul>
+<p>```{julia; eval=true}</p>
+<p>Lion(roar::AbstractString) = Lion(&quot;green&quot;,roar) ## This is an outer constructor because it's outside the type definition</p>
+<p>type Panther &lt;: Cat # Panther is also a subtype of Cat eye_color Panther() = new(&quot;green&quot;) # Panthers will only have this constructor, and no default constructor. end ## Using inner constructors, like Panther does, gives you control ## over how values of the type can be created. ## When possible, you should use outer constructors rather than inner ones.</p>
 
 <HR />
 <div class="footer"><p>
