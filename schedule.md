@@ -6,7 +6,7 @@
 
 | # | date | arguments | category |
 |--:|------|-----------|----------|
-| 1 | Mon  26 | Abacus, Introduction to Julia | Programming |
+| 1 | Mon  26 | Abacus, Introduction to Julia | [Programming](2016-09-26) |
 <!-- 
 | 2 | Fri  7 | x | x |
 | 3 | Mon 10 | x | x |
