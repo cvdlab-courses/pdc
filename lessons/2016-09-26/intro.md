@@ -13,11 +13,12 @@
 
 ## Course Schedule and study materials
 
+*	Monday 11:00-13:00, (A. Paoluzzi, lecture  -- room 211)
+*	Wednesday 11:00-13:00, (A. Paoluzzi, lecture  -- room 211)
+*	Tuesday 11:330, (R. D'Autilia, workshop -- every two weeks -- room 311)
+
 [_schedule_](https://github.com/cvdlab-courses/pdc/blob/master/schedule.md)
 
-*	Monday 11:00-13:00, (lecture -- room 211)
-*	Wednesday 11:00-13:00, (lecture -- room 211)
-*	Tuesday 11:330, (workshop -- every two weeks -- room 311)
 
 ## Course ToolBox
 
