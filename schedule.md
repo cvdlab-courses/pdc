@@ -2,11 +2,12 @@
 
 ## Schedule
 
-### October 2016
+### September 2016
 
 | # | date | arguments | category |
 |--:|------|-----------|----------|
-| 1 | Mon  3 | x | x |
+| 1 | Mon  26 | Abacus, Introduction to Julia | Programming |
+<!-- 
 | 2 | Fri  7 | x | x |
 | 3 | Mon 10 | x | x |
 | 4 | Fri 14 | x | x |
@@ -51,3 +52,4 @@
 | 5 | Mon 23 | x | x |
 | 6 | Fri 27 | x | x |
 | 7 | Mon 30 | x | x |
+ -->
