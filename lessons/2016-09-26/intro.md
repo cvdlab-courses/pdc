@@ -11,9 +11,13 @@
 
 [_https://github.com/cvdlab-courses/pdc_](https://github.com/cvdlab-courses/pdc)
 
-## Course Schedule and materials
+## Course Schedule and study materials
 
 [_schedule_](https://github.com/cvdlab-courses/pdc/blob/master/schedule.md)
+
+*	Monday 11:00-13:00, (lecture -- room 211)
+*	Wednesday 11:00-13:00, (lecture -- room 211)
+*	Tuesday 11:330, (workshop -- every two weeks -- room 311)
 
 ## Course ToolBox
 
