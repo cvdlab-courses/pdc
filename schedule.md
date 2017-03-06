@@ -2,11 +2,11 @@
 
 ## Schedule
 
-### September 2016
+### March 2017
 
 | # | date | arguments | category |
 |--:|------|-----------|----------|
-| 1 | Mon  26 | [Abacus](README.md), [Introduction to Julia](lessons/2016-09-26/) | Programming |
+| 1 | Mon  6 | [Introduction to Julia](lessons/2017-03-06/lecture-01.pdf) | Programming |
 <!-- 
 | 2 | Fri  7 | x | x |
 | 3 | Mon 10 | x | x |
