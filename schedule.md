@@ -7,6 +7,7 @@
 | # | date | arguments | category |
 |--:|------|-----------|----------|
 | 1 | Mon  6 | [Introduction to Julia](lessons/2017-03-06/lecture-01.pdf) | Programming |
+| 2 | Wed  8 | [Overview of parallel computing](lessons/2017-03-08/lecture-02.pdf) | Theory |
 <!-- 
 | 2 | Fri  7 | x | x |
 | 3 | Mon 10 | x | x |
