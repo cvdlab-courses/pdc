@@ -10,8 +10,8 @@
 | 2 | Wed  8 | [Overview of parallel computing](lessons/2017-03-08/lecture-02.pdf) | Theory |
 | 3 | Mon  13 | [Git & GitHub, Julia packages](lessons/2017-03-13/lecture-03.pdf) | Programming |
 | 4 | Wed 15 | [Concepts and Terminology](lessons/2017-03-15/lecture-04.pdf) | Theory |
+| 5 | Mon 20 | [Parallel Architectures and Programming Models](lessons/2017-03-20/) | Theory |
 <!-- 
-| 4 | Fri 14 | x | x |
 | 5 | Mon 17 | x | x |
 | 6 | Fri 21 | x | x |
 | 7 | Mon 24 | x | x |
