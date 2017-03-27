@@ -11,9 +11,9 @@
 | 3 | Mon  13 | [Git & GitHub, Julia packages](lessons/2017-03-13/lecture-03.pdf) | Programming |
 | 4 | Wed 15 | [Concepts and Terminology](lessons/2017-03-15/lecture-04.pdf) | Theory |
 | 5 | Mon 20 | [Parallel Architectures and Programming Models](lessons/2017-03-20/) | Theory |
+| 5 | Wed 22 | x | Practice |
+| 6 | Mon 27 | [Parallel Programming in Julia](lessons/2017-03-27/) | Programming |
 <!-- 
-| 5 | Mon 17 | x | x |
-| 6 | Fri 21 | x | x |
 | 7 | Mon 24 | x | x |
 | 8 | Fri 28 | x | x |
 
