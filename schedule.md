@@ -14,14 +14,13 @@
 | 6 | Wed 22 | x | Practice |
 | 7 | Mon 27 | [Parallel Programming in Julia](lessons/2017-03-27/) | Programming |
 | 8 | Wed 29 | [Parallel Programming in Julia](lessons/2017-03-29/) | Theory |
-<!-- 
-| 8 | Fri 28 | x | x |
 
-### November 2016
+### April 2017
 
 | # | date | arguments | category |
 |--:|------|-----------|----------|
-| 1 | Fri  4 | x | x |
+| 9 | Mon 3 | [Make parallel:domain integration](lessons/2017-04-03/) | Programming |
+<!-- 
 | 2 | Mon  7 | x | x |
 | 3 | Fri 11 | x | x |
 | 4 | Mon 14 | x | x |
