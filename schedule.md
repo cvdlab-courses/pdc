@@ -20,8 +20,8 @@
 | # | date | arguments | category |
 |--:|------|-----------|----------|
 | 9 | Mon 3 | [Make parallel:domain integration](lessons/2017-04-03/) | Programming |
+| 10 | Wed 5 | [Code vectorization](lessons/2017-04-05/) | Theory |
 <!-- 
-| 2 | Mon  7 | x | x |
 | 3 | Fri 11 | x | x |
 | 4 | Mon 14 | x | x |
 | 5 | Fri 18 | x | x |
