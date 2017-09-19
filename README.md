@@ -1,6 +1,6 @@
 # Parallel and Distributed Computing (IN480)
 
-## ABACUS 2016/17
+## ABACUS 2017/18
 
 ### Teachers
 
