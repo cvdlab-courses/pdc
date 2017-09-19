@@ -41,3 +41,21 @@ Access will be granted to the [Compute Cluster](http://web-cluster.fis.uniroma3.
 
 *	Antonio DiCarlo, Alberto Paoluzzi, and Vadim Shapiro, [Linear algebraic representation for topological structures](http://www.sciencedirect.com/science/article/pii/S001044851300184X), _Computer-Aided Design_, 46-1, 2014
 
+## Schedule
+
+### Coming soon ...
+
+<!-- to be used as an exmaple
+### March 2017
+
+| # | date | arguments | category |
+|--:|------|-----------|----------|
+| 1 | Mon  6 | [Introduction to Julia](lessons/2017-03-06/lecture-01.pdf) | Programming |
+| 2 | Wed  8 | [Overview of parallel computing](lessons/2017-03-08/lecture-02.pdf) | Theory |
+| 3 | Mon  13 | [Git & GitHub, Julia packages](lessons/2017-03-13/lecture-03.pdf) | Programming |
+| 4 | Wed 15 | [Concepts and Terminology](lessons/2017-03-15/lecture-04.pdf) | Theory |
+| 5 | Mon 20 | [Parallel Architectures and Programming Models](lessons/2017-03-20/) | Theory |
+| 6 | Wed 22 | x | Practice |
+| 7 | Mon 27 | [Parallel Programming in Julia](lessons/2017-03-27/) | Programming |
+| 8 | Wed 29 | [Parallel Programming in Julia](lessons/2017-03-29/) | Theory |
+-->
