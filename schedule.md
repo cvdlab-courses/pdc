@@ -8,6 +8,14 @@
 |--:|------|-----------|----------|
 | 1 | Tue  26 | [Introduction to Julia 1](lessons/2017-09-26/) | Programming |
 | 2 | Thu  28 | [Introduction to Julia 2](lessons/2017-09-28/) | Programming |
+
+
+### October 2017
+
+| # | date | arguments | category |
+|--:|------|-----------|----------|
+| 3 | Tue  3 | [Introduction to Julia 3](lessons/2017-10-03/) | Programming |
+
 <!-- 
 | 2 | Wed  8 | [Overview of parallel computing](lessons/2017-03-08/lecture-02.pdf) | Theory |
 | 3 | Mon  13 | [Git & GitHub, Julia packages](lessons/2017-03-13/lecture-03.pdf) | Programming |
