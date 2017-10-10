@@ -16,6 +16,7 @@
 |--:|------|-----------|----------|
 | 3 | Tue  3 | [Introduction to Julia 3](lessons/2017-10-03/) | Programming |
 | 4 | Thu  5 | [Version Control Systems](lessons/2017-10-05/) | Programming |
+| 5 | Tue  10 | [Concepts and Terminology](lessons/2017-10-10/) | Theory |
 
 <!-- 
 | 2 | Wed  8 | [Overview of parallel computing](lessons/2017-03-08/lecture-02.pdf) | Theory |
