@@ -43,7 +43,7 @@ Access will be granted to the [Compute Cluster](http://web-cluster.fis.uniroma3.
 
 ## Schedule
 
-### Coming soon ...
+Look [here](schedule.md)
 
 <!-- to be used as an exmaple
 ### March 2017
