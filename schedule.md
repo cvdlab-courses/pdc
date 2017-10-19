@@ -19,6 +19,7 @@
 | 5 | Tue  10 | [Exercise n.1](lessons/2017-10-10/) | Practice |
 | 6 | Thu  12 | [Concepts and Terminology 1](lessons/2017-10-12/) | Theory |
 | 7 | Tue  17 | [Concepts and Terminology 2](lessons/2017-10-17/) | Theory |
+| 8 | Tue  19 | [Lab projects](lessons/2017-10-19/) | Projects |
 
 <!-- 
 | 2 | Wed  8 | [Overview of parallel computing](lessons/2017-03-08/lecture-02.pdf) | Theory |
