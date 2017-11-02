@@ -27,7 +27,7 @@
 
 | # | date | arguments | category |
 |--:|------|-----------|----------|
-| 11 | Tue  2 | [Lab projects 3: Bootstrap](lessons/2017-10-24/) | Projects |
+| 11 | Tue  2 | [Lab projects 3: Bootstrap](lessons/2017-11-02/) | Projects |
 
 <!-- 
 | 2 | Wed  8 | [Overview of parallel computing](lessons/2017-03-08/lecture-02.pdf) | Theory |
