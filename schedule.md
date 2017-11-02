@@ -21,6 +21,13 @@
 | 7 | Tue  17 | [Concepts and Terminology 2](lessons/2017-10-17/) | Theory |
 | 8 | Thu  19 | [Lab projects 1: Intro](lessons/2017-10-19/) | Projects |
 | 9 | Tue  24 | [Lab projects 2: Assignment](lessons/2017-10-24/) | Projects |
+| 10 | Thu  26 | [Exercise n.2](lessons/2017-10-26/) | Practice |
+
+### November 2017
+
+| # | date | arguments | category |
+|--:|------|-----------|----------|
+| 11 | Tue  2 | [Lab projects 3: Bootstrap](lessons/2017-10-24/) | Projects |
 
 <!-- 
 | 2 | Wed  8 | [Overview of parallel computing](lessons/2017-03-08/lecture-02.pdf) | Theory |
