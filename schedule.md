@@ -32,7 +32,14 @@
 | 13 | Thu  16 | [Exercise n.3](lessons/2017-10-24/) | Practice |
 | 14 | Tue  21 | [Lab projects 5: Unit tests](lessons/2017-11-21/) | Projects |
 | 15 | Thu  23 | [Julia Parallel Computing 1](lessons/2017-11-23/) | Parallel Computing |
-| 16 | Thu  24 | [Julia Parallel Computing 2](lessons/2017-11-28/) | Parallel Computing |
+| 16 | Tue  16 | [Exercise n.3](lessons/2017-10-24/) | Practice |
+| 17 | Thu  24 | [Julia Parallel Computing 2](lessons/2017-11-28/) | Parallel Computing |
+
+### December 2017
+
+| # | date | arguments | category |
+|--:|------|-----------|----------|
+| 18 | Tue  5 | [Lab projects 6: Viewing](lessons/2017-12-05/) | Projects |
 
 <!-- 
 | 2 | Wed  8 | [Overview of parallel computing](lessons/2017-03-08/lecture-02.pdf) | Theory |
