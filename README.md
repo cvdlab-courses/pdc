@@ -27,7 +27,7 @@ Brief introduction to Julia language. Introduction to parallel architectures, Pa
 
 ## Computational resources
 
-Access will be granted to computational resources of the Department, including a DGX-1 superserver.
+Access will be granted to computational resources of the department, including a DGX-1 superserver.
 
 ## Teaching materials
 
@@ -44,7 +44,7 @@ Access will be granted to computational resources of the Department, including a
 
 | # | date | arguments | category |
 |--:|------|-----------|----------|
-| 1 | Sept. Tue 25 | [Introduction to Julia and Git/GitHub](lectures/2018-09-25/) | Programming |
+| 1 | Sept. Tue 25 | [Introduction to Julia and Git/GitHub](lectures/) | Programming |
 
 <!-- to be used as an exmaple
 ### March 2017
