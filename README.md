@@ -45,6 +45,7 @@ Access will be granted to computational resources of the department, including a
 | # | date | arguments | category |
 |--:|------|-----------|----------|
 | 1 | Tue 25 | [Introduction to MarkDown and Git](lectures/) | Programming |
+| 2 | Thu 27 | [Basic Julia](lectures/) | Language |
 
 <!-- to be used as an exmaple
 ### March 2017
