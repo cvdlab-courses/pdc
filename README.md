@@ -52,7 +52,7 @@ Access will be granted to computational resources of the department, including a
 
 | # | date | arguments | category |
 |--:|------|-----------|----------|
-| 3 | Oct 1 | [Assignment of course projects](lectures/2018-10-01/) | Projects |
+| 3 | Oct 2 | [Assignment of course projects](lectures/2018-10-01/) | Projects |
 
 
 
