@@ -9,4 +9,5 @@ catch
 end
 
 run(`$(PyCall.python) -m pip install --user --upgrade pip setuptools`)
+run(`$(PyCall.python) -m pip install --user PyOpenGL`)
 run(`$(PyCall.python) -m pip install --user pyplasm`)

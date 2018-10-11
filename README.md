@@ -55,6 +55,7 @@ Access will be granted to computational resources of the department, including a
 | 3 | Oct 2 | [Assignment of course projects](lectures/2018-10-02/) | Projects |
 | 4 | Oct 4 | [Assignment of course projects](lectures/2018-10-04/) | Projects |
 | 5 | Oct 9 | [Parallel architectures](lectures/2018-10-09/) | Theory |
+| 6 | Oct 11 | [Parallel terminology](lectures/2018-10-11/) | Theory + Programming |
 
  
 
