@@ -56,6 +56,10 @@ Access will be granted to computational resources of the department, including a
 | 4 | Oct 4 | [Assignment of course projects](lectures/2018-10-04/) | Projects |
 | 5 | Oct 9 | [Parallel architectures](lectures/2018-10-09/) | Theory |
 | 6 | Oct 11 | [Parallel terminology](lectures/2018-10-11/) | Theory + Programming |
+| - | Oct 16 | [No lecture]() | --- |
+| - | Oct 18 | [No lecture]() | --- |
+| 7 | Oct 23 | [B-spline curves](lectures/2018-10-11/) | Programming |
+
 
  
 
