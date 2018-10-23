@@ -58,7 +58,7 @@ Access will be granted to computational resources of the department, including a
 | 6 | Oct 11 | [Parallel terminology](lectures/2018-10-11/) | Theory + Programming |
 | - | Oct 16 | [No lecture]() | --- |
 | - | Oct 18 | [No lecture]() | --- |
-| 7 | Oct 23 | [B-spline curves](lectures/2018-10-11/) | Programming |
+| 7 | Oct 23 | [B-spline curves](lectures/2018-23-11/) | Programming |
 
 
  
