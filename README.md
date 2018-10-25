@@ -59,6 +59,7 @@ Access will be granted to computational resources of the department, including a
 | - | Oct 16 | [No lecture]() | --- |
 | - | Oct 18 | [No lecture]() | --- |
 | 7 | Oct 23 | [B-spline curves](lectures/2018-10-23/) | Programming |
+| 8 | Oct 25 | [Parallel JUlia](lectures/2018-10-25/) | Programming |
 
 
  
