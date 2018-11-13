@@ -52,14 +52,22 @@ Access will be granted to computational resources of the department, including a
 
 | # | date | arguments | category |
 |--:|------|-----------|----------|
-| 3 | Oct 2 | [Assignment of course projects](lectures/2018-10-02/) | Projects |
-| 4 | Oct 4 | [Assignment of course projects](lectures/2018-10-04/) | Projects |
-| 5 | Oct 9 | [Parallel architectures](lectures/2018-10-09/) | Theory |
-| 6 | Oct 11 | [Parallel terminology](lectures/2018-10-11/) | Theory + Programming |
-| - | Oct 16 | [No lecture]() | --- |
-| - | Oct 18 | [No lecture]() | --- |
-| 7 | Oct 23 | [B-spline curves](lectures/2018-10-23/) | Programming |
-| 8 | Oct 25 | [Parallel JUlia](lectures/2018-10-25/) | Programming |
+| 3 | Tue 2 | [Assignment of course projects](lectures/2018-10-02/) | Projects |
+| 4 | Thu 4 | [Assignment of course projects](lectures/2018-10-04/) | Projects |
+| 5 | Tue 9 | [Parallel architectures](lectures/2018-10-09/) | Theory |
+| a | Wed 10 | [Workshop 1](workshops/workshop1/) | Variables, types and functions |
+| 6 | Thu 11 | [Parallel terminology](lectures/2018-10-11/) | Theory + Programming |
+| - | Tue 16 | [No lecture]() | --- |
+| - | Thu 18 | [No lecture]() | --- |
+| 7 | Tue 23 | [B-spline curves](lectures/2018-10-23/) | Programming |
+| b | Tue 23 | [Workshop 2](workshops/workshop2/) | Storage: Arrays and Tuples |
+| 8 | Thu 25 | [Parallel Julia](lectures/2018-10-25/) | Programming |
+
+### November 2018
+
+| # | date | arguments | category |
+|--:|------|-----------|----------|
+| 9 | Tue 13 | [Parallel programming models](lectures/2018-11-13/) | Theory |
 
 
  
