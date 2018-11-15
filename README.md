@@ -62,12 +62,14 @@ Access will be granted to computational resources of the department, including a
 | 7 | Tue 23 | [B-spline curves](lectures/2018-10-23/) | Programming |
 | b | Tue 23 | [Workshop 2](workshops/workshop2/) | Storage: Arrays and Tuples |
 | 8 | Thu 25 | [Parallel Julia](lectures/2018-10-25/) | Programming |
+| - | Tue 30 | [No lecture]() | --- |
 
 ### November 2018
 
 | # | date | arguments | category |
 |--:|------|-----------|----------|
 | 9 | Tue 13 | [Parallel programming models](lectures/2018-11-13/) | Theory |
+| 10 | Thu 15 | [Parallel algorithm design](lectures/2018-11-15/) | Theory |
 
 
  
