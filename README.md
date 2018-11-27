@@ -71,6 +71,8 @@ Access will be granted to computational resources of the department, including a
 | 9 | Tue 13 | [Parallel programming models](lectures/2018-11-13/) | Theory |
 | 10 | Thu 15 | [Parallel algorithm design](lectures/2018-11-15/) | Theory |
 | 11 | Tue 20 | [Sparse matrices](lectures/2018-11-20/) | Programming |
+| 12 | Thu 22 | [Student works]() | Projects |
+| 13 | Tue 27 | [Computing with sparse matrices ](lectures/2018-11-27/) | Programming |
 
 
  
