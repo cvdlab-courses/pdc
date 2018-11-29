@@ -73,6 +73,7 @@ Access will be granted to computational resources of the department, including a
 | 11 | Tue 20 | [Sparse matrices](lectures/2018-11-20/) | Programming |
 | 12 | Thu 22 | [Student works]() | Projects |
 | 13 | Tue 27 | [Computing with sparse matrices ](lectures/2018-11-27/) | Programming |
+| 14 | Thu 29 | [Test Driven Development ](lectures/2018-11-29/) | Programming |
 
 
  
