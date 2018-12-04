@@ -150,7 +150,7 @@ function algorithm_one(V,FV,EV,copFE)
 	FE = [findnz(copFE[k,:])[1] for k=1:size(copFE,1)]
 	# Initializations
 	m,n = size(copEF)
-	marks = zeros(Int,n);
+	marks = zeros(Int8,n);
 	I = Int64[]; J = Int64[]; V = Int8[]; 
 	jcol = 0
 	choose(marks) = findfirst(x -> x<2, marks)
@@ -181,8 +181,10 @@ function algorithm_one(V,FV,EV,copFE)
 				fan = ord(abs(τ),bd1,V,FV,EV,FE) # ord(pivot,bd1)
 				if τ > 0 
 					adj = next(fan,pivot)
+					@show adj
 				elseif τ < 0 
 					adj = prev(fan,pivot)
+					@show adj
 				end
 				# orient adj
 				if copEF[abs(τ),adj] ≠ copEF[abs(τ),pivot] 
@@ -216,6 +218,7 @@ end
 
 copFC = algorithm_one(V,FV,EV,copFE)
 Matrix(copFC)
+
 
 
 
