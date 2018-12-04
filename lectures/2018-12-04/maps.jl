@@ -31,5 +31,4 @@ Plasm.view(W,FW)
 FW = [k%2==1 ? [v2,v1,v3] : [v1,v2,v3] for (k,(v1,v2,v3)) in enumerate(FV)]
 Plasm.view(W,FW)
 
-# using to display a surface:   see repo: LinearAlgebraicRepresentation/src/mapper.jl
-
+# using to display a surface:   see repo: LinearAlgebraicRepresentation/src/mapper.j
