@@ -1,11 +1,10 @@
-# Parallel and Distributed Computing (IN480)
+# Parallel and Distributed Computing  (Computational Sciences & Computer Engineering)
 
-## ABACUS 2018/19
+## ABACUS 2019/20 (IN480)
 
 ### Teachers
 
 *	[Alberto Paoluzzi](http://paoluzzi.dia.uniroma3.it), 
-*	[Roberto D'Autilia](https://www.researchgate.net/profile/Roberto_DAutilia)
 
 ## Course Description, Goals and Objectives
 
@@ -27,24 +26,27 @@ Brief introduction to Julia language. Introduction to parallel architectures, Pa
 
 ## Computational resources
 
-Access will be granted to computational resources of the department, including a DGX-1 superserver.
+Access will be granted to computational resources, including a DGX-1 superserver.
 
 ## Teaching materials
 
 *	[Lecture slides](lectures/)
 
-*	Blaise N. Barney, [HPC Training Materials](https://computing.llnl.gov/tutorials/parallel_comp/), by kind permission of [Lawrence Livermore National Laboratory](https://www.llnl.gov)'s Computational Training Center
+#.	McCool, Reinders, and Robison, [Structured Parallel Programming: Patterns for Efficient Computation](https://www.amazon.com/Structured-Parallel-Programming-Efficient-Computation/dp/0124159931), Morgan Kaufmann, 2012
 
-*	J. Dongarra, J. Kurzak, J. Demmel, M. Heroux, [Linear Algebra Libraries for High- Performance Computing: Scientific Computing with Multicore and Accelerators](http://www.netlib.org/utk/people/JackDongarra/SLIDES/sc2011-tutorial.pdf), SuperComputing 2011 (SC11)
+#. Ivo Balbaert and Adrian Salceanu, [Julia 1.0 Programming, Complete Reference Guide](https://www.amazon.it/Julia-Programming-Complete-Reference-Guide/dp/1838822240/ref=tmm_other_meta_binding_swatch_0?_encoding=UTF8&qid=&sr=)
 
 
 ## Schedule and materials
 
-### September 2018
+### October 2019
 
 | # | date | arguments | category |
 |--:|------|-----------|----------|
-| 1 | Tue 25 | [Introduction to MarkDown and Git](lectures/2018-09-25/) | Programming |
+| 1 | Tue 25 | [Introduction to MarkDown and Git](lectures/2019-10-01/) | Programming |
+
+
+<!-- 
 | 2 | Thu 27 | [Basic Julia](lectures/2018-09-27/) | Language |
 
 
@@ -74,6 +76,7 @@ Access will be granted to computational resources of the department, including a
 | 12 | Thu 22 | [Student works]() | Projects |
 | 13 | Tue 27 | [Computing with sparse matrices ](lectures/2018-11-27/) | Programming |
 | 14 | Thu 29 | [Test Driven Development ](lectures/2018-11-29/) | Programming |
+ -->
 
 
 
