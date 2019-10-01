@@ -78,6 +78,7 @@ Access will be granted to computational resources, including a DGX-1 superserver
 | 14 | Thu 29 | [Test Driven Development ](lectures/2018-11-29/) | Programming |
  -->
 
+<!-- 
 
 
 ### December 2018
@@ -87,6 +88,7 @@ Access will be granted to computational resources, including a DGX-1 superserver
 | 15 | Tue 4 | [Basic Linear Algebra Sistems](lectures/2018-12-04/) | Programming |
 
 
+ -->
  
 
 
