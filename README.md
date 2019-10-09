@@ -46,7 +46,7 @@ Access will be granted to computational resources, including a DGX-1 superserver
 | 1 | Tue 01 | [Introduction to MarkDown and Git](lectures/2019-10-01/) | Programming |
 | 2 | Wed 02 | [Basic Julia](lectures/2019-10-02/) | Programming |
 | 3 | Mon 07 | [Basic Julia & project infos](lectures/2019-10-07/) | Language & Project |
-| 4 | Tue 08 | [Recall basic math](lectures/2019-10-08/) | Math |
+| 4 | Tue 08 | [Basic Math Recall](lectures/2019-10-08/) | Math |
 | 5 | Wed 09 | [Basic Julia & project infos](lectures/2019-10-09/) | Language & Project |
 
 
