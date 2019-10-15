@@ -49,8 +49,7 @@ Access will be granted to computational resources, including a DGX-1 superserver
 | 4 | Tue 08 | [Basic Math Recall](lectures/2019-10-08/) | Math |
 | 5 | Wed 09 | [Basic Julia & project infos](lectures/2019-10-09/) | Language & Project |
 | 6 | Mon 14 | [Intro to Parallel Computation](lectures/2019-10-14/) | Theory |
-| 7 | Tue 15 | [Analysis of course project](lectures/2018-10-15/) | Project |
-
+| 7 | Tue 15 | [Analysis of course project](lectures/2019-10-15/) | Project |
 
 <!-- 
 | 2 | Thu 27 | [Basic Julia](lectures/2018-09-27/) | Language |
