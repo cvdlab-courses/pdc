@@ -51,6 +51,7 @@ Access will be granted to computational resources, including a DGX-1 superserver
 | 6 | Mon 14 | [Intro to Parallel Computation](lectures/2019-10-14/) | Theory |
 | 7 | Tue 15 | [Analysis of course project](lectures/2019-10-15/) | Project |
 | 8 | Wed 16 | [Course project scan](lectures/2019-10-16/) | Project |
+| 9 | Mon 21 | [Parallel patterns & Arrangement pipeline](lectures/2019-10-21/) | Theory & Project |
 
 <!-- 
 | 2 | Thu 27 | [Basic Julia](lectures/2018-09-27/) | Language |
