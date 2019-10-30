@@ -30,11 +30,10 @@ Access will be granted to computational resources, including a DGX-1 superserver
 
 ## Teaching materials
 
-*	[Lecture slides](lectures/)
-
-#.	McCool, Reinders, and Robison, [Structured Parallel Programming: Patterns for Efficient Computation](https://www.amazon.com/Structured-Parallel-Programming-Efficient-Computation/dp/0124159931), Morgan Kaufmann, 2012
-
-#. Ivo Balbaert and Adrian Salceanu, [Julia 1.0 Programming, Complete Reference Guide](https://www.amazon.it/Julia-Programming-Complete-Reference-Guide/dp/1838822240/ref=tmm_other_meta_binding_swatch_0?_encoding=UTF8&qid=&sr=)
+#.	[Lecture slides](lectures/)
+#.	McCool, Reinders, and Robison, [*Structured Parallel Programming*: Patterns for Efficient Computation](https://www.amazon.com/Structured-Parallel-Programming-Efficient-Computation/dp/0124159931), Morgan Kaufmann, 2012
+#. Avik Sengupta, [*Julia High Performance*: Optimizations, distributed computing, multithreading, and GPU programming with Julia 1.0 and beyond, 2nd Edition](https://juliahighperformance.com), Pakt>, 2019 
+#. Ivo Balbaert and Adrian Salceanu, [*Julia 1.0 Programming, Complete Reference Guide*](https://www.amazon.it/Julia-Programming-Complete-Reference-Guide/dp/1838822240/ref=tmm_other_meta_binding_swatch_0?_encoding=UTF8&qid=&sr=)
 
 
 ## Schedule and materials
@@ -55,7 +54,8 @@ Access will be granted to computational resources, including a DGX-1 superserver
 | 10 | Tue 22 | [Data patterns & Symmetry + bound.compat.](lectures/2019-10-22/) | Theory & Project |
 | 11 | Wed 23 | [Coroutines + debug code](lectures/2019-10-23/) | Theory & Project |
 | 12 | Mon 28 | [Julia Timing and profiling](lectures/2019-10-28/) | Julia Programming |
-| 13 | Tue 28 | [Julia types and single dispatching](lectures/2019-10-29/) |Julia Programming |
+| 13 | Tue 29 | [Julia types and single dispatching](lectures/2019-10-29/) |Julia Programming |
+| 14 | Wed 30 | [Fast function calls & macros](lectures/2019-10-30/) |Julia Programming & Project|
 
 <!-- 
 | 2 | Thu 27 | [Basic Julia](lectures/2018-09-27/) | Language |
