@@ -57,6 +57,17 @@ Access will be granted to computational resources, including a DGX-1 superserver
 | 13 | Tue 29 | [Julia types and single dispatching](lectures/2019-10-29/) |Julia Programming |
 | 14 | Wed 30 | [Fast function calls & macros](lectures/2019-10-30/) |Julia Programming & Project|
 
+### November 2019
+
+| # | date | arguments | category |
+|--:|------|-----------|----------|
+| 15 | Tue 05 | [Exercise](lectures/2019-11-05/) |projects, Q&A |
+| 16 | Wed 06 | [Exercise](lectures/2019-11-06/) |projects, Q&A|
+| 17 | Mon 11 | [Program A](lectures/2019-11-11/) | projects, Q&A |
+| 18 | Tue 12 | [Program B](lectures/2019-11-12/) | new projects |
+| 19 | Wed 13 | [Program C](lectures/2019-11-13/) | new projects |
+
+
 <!-- 
 | 2 | Thu 27 | [Basic Julia](lectures/2018-09-27/) | Language |
 
