@@ -65,7 +65,8 @@ Access will be granted to computational resources, including a DGX-1 superserver
 | 16 | Wed 06 | [Exercise](lectures/2019-11-06/) |projects, Q&A|
 | 17 | Mon 11 | [Program A](lectures/2019-11-11/) | projects, Q&A |
 | 18 | Tue 12 | [Program B](lectures/2019-11-12/) | new projects |
-| 19 | Wed 13 | [Program C](lectures/2019-11-13/) | new projects |
+| 19 | Wed 13 | [Program B](lectures/2019-11-13/) | new projects |
+| 20 | Mon 18 | [Program C](lectures/2019-11-18/) | new projects |
 
 
 <!-- 
