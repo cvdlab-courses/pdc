@@ -67,7 +67,19 @@ Access will be granted to computational resources, including a DGX-1 superserver
 | 18 | Tue 12 | [Program B](lectures/2019-11-12/) | new projects |
 | 19 | Wed 13 | [Program B](lectures/2019-11-13/) | new projects |
 | 20 | Mon 18 | [Program C](lectures/2019-11-18/) | new projects |
+| 21 | Tue 19 | [Julia tasks + Concurrent programming](lectures/2019-11-19/) | new projects |
+| 22 | Wed 20 | [Paaa](lectures/2019-11-/) | aaaa |
 
+| 23 | Mon 25 | [Molecular dynamics](lectures/2019-11-25/) | Theory & Project |
+| 24 | Tue 26 | [Tasks](lectures/2019-11-26/) | Julia Programming |
+| 25 | Wed 27 | [Threads](lectures/2019-11-27/) | Julia Programming |
+
+
+### December 2019
+
+| # | date | arguments | category |
+|--:|------|-----------|----------|
+| 26 | Mon 2 | [Best practices](lectures/2019-12-02/) | Julia Programming |
 
 <!-- 
 | 2 | Thu 27 | [Basic Julia](lectures/2018-09-27/) | Language |
