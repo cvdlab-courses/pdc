@@ -82,6 +82,7 @@ Access will be granted to computational resources, including a DGX-1 superserver
 | 26 | Mon 2 | [Best practices](lectures/2019-12-02/) | Julia Programming |
 | 27 | Tue 3 | [Task-based concurrency](lectures/2019-12-03/) | Julia Programming |
 | 28 | Wed 4 | [Distributed parallelism](lectures/2019-12-04/) | Julia Programming |
+| 29 | Mon 9 | [Shared & distributed arrays](lectures/2019-12-09/) | Julia Programming |
 
 <!-- 
 | 2 | Thu 27 | [Basic Julia](lectures/2018-09-27/) | Language |
