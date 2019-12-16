@@ -85,6 +85,7 @@ Access will be granted to computational resources, including a DGX-1 superserver
 | 29 | Mon 9 | [Shared & distributed arrays](lectures/2019-12-09/) | Julia Programming |
 | 30 | Tue 10 | [Parallelizable tasks](lectures/2019-12-10/) | Project A |
 | 31 | Wed 11 | [Parallelizable tasks](lectures/2019-12-11/) | Project A |
+| 32 | Mon 16 | [BLAS, LAPACK](lectures/2019-12-16/) | Programming |
 
 <!-- 
 | 2 | Thu 27 | [Basic Julia](lectures/2018-09-27/) | Language |
