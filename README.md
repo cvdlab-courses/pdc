@@ -89,8 +89,14 @@ Access will be granted to computational resources, including a DGX-1 superserver
 | 33 | Tue 17 | [LinearAlgebra.jl, GraphBLAS](lectures/2019-12-17/) | Programming |
 | 34 | Wed 18 | [GraphBLAS & Linear Systems](lectures/2019-12-18/) | Programming |
 
+
+### January 2020
+
+| # | date | arguments | category |
+|--:|------|-----------|----------|
+| 35 | Tue 7 | [Julia CUDA](lectures/2020-01-07/) | Julia Programming |
+
 <!-- 
-| 2 | Thu 27 | [Basic Julia](lectures/2018-09-27/) | Language |
 
 
 ### October 2018
