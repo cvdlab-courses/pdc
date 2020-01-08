@@ -95,6 +95,7 @@ Access will be granted to computational resources, including a DGX-1 superserver
 | # | date | arguments | category |
 |--:|------|-----------|----------|
 | 35 | Tue 7 | [Julia CUDA](lectures/2020-01-07/) | Julia Programming |
+| 36 | Wed 8 | [CUDA concepts](lectures/2020-01-08/) | Julia Programming |
 
 <!-- 
 
