@@ -60,11 +60,11 @@ end
 
 
 # V,CV = Lar.cuboidGrid([3,2,1])
-# V,CV = random3cells([40,20,10],4_000)
+V,CV = random3cells([40,20,10],4_000)
 
 VV = [[v] for v=1:size(V,2)]
-FV = convert(Array{Array{Int64,1},1}, collect(Set(cat(map(CV2FV,CV)))))
-EV = convert(Array{Array{Int64,1},1}, collect(Set(cat(map(CV2EV,CV)))))
+FV = convert(Array{Array{Int64,1},1}, collect(Set(vcat(map(CV2FV,CV)...))))
+EV = convert(Array{Array{Int64,1},1}, collect(Set(vcat(map(CV2EV,CV)...))))
 
 M_0 = K(VV)
 M_1 = K(EV)

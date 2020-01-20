@@ -97,7 +97,11 @@ Access will be granted to computational resources, including a DGX-1 superserver
 | 35 | Tue 7 | [Julia CUDA](lectures/2020-01-07/) | Julia Programming |
 | 36 | Wed 8 | [CUDA concepts](lectures/2020-01-08/) | Julia Programming |
 | 37 | Mon 13 | [Julia CuArrays](lectures/2020-01-13/) | Programming |
-| 38 | Tue 14 | [GPU-Julia](lectures/2020-01-14/) | Programming |
+| 38 | Tue 14 | [GPU-Julia](lectures/2020-01-14/) | Programming | 
+<!-- 
+| 39 | Wed 15 | NO lecture -- car block !!
+ -->
+| 39 | Mon 20 | [Assignment of course projects](lectures/2020-01-20/) | Projects |
 
 <!-- 
 
@@ -106,7 +110,6 @@ Access will be granted to computational resources, including a DGX-1 superserver
 
 | # | date | arguments | category |
 |--:|------|-----------|----------|
-| 3 | Tue 2 | [Assignment of course projects](lectures/2018-10-02/) | Projects |
 | 4 | Thu 4 | [Assignment of course projects](lectures/2018-10-04/) | Projects |
 | 5 | Tue 9 | [Parallel architectures](lectures/2018-10-09/) | Theory |
 | a | Wed 10 | [Workshop 1](workshops/workshop1/) | Variables, types and functions |
