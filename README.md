@@ -41,13 +41,14 @@ Access will be granted to computational resources, including a DGX-1 superserver
 
 ## Schedule and materials
 
-<!-- 
 
-### October 2019
+### October 2020
+
 
 | # | date | arguments | category |
 |--:|------|-----------|----------|
-| 1 | Tue 01 | [Introduction to MarkDown and Git](lectures/2019-10-01/) | Programming |
+| 1 | Thu 01 | [Some tools: introduction to MarkDown and Git](lectures/2020-10-01/) | Programming |
+<!-- 
 | 2 | Wed 02 | [Basic Julia](lectures/2019-10-02/) | Programming |
 | 3 | Mon 07 | [Basic Julia & project infos](lectures/2019-10-07/) | Language & Project |
 | 4 | Tue 08 | [Basic Math Recall](lectures/2019-10-08/) | Math |
@@ -105,10 +106,8 @@ Access will be granted to computational resources, including a DGX-1 superserver
 | 38 | Tue 14 | [GPU-Julia](lectures/2020-01-14/) | Programming | 
 <!-- 
 | 39 | Wed 15 | NO lecture -- car block !!
- -->
 | 39 | Mon 20 | [Assignment of course projects](lectures/2020-01-20/) | Projects |
 
-<!-- 
 
 
 ### October 2018
