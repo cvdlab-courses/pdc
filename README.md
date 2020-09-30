@@ -1,8 +1,8 @@
 # Parallel and Distributed Computing  (Computational Sciences & Computer Engineering)
 
-## ABACUS 2019/20 (IN480)
+## ABACUS 2020/21 (IN480)
 
-### Teachers
+### Teacher
 
 *	[Alberto Paoluzzi](http://paoluzzi.dia.uniroma3.it), 
 
@@ -37,6 +37,8 @@ Access will be granted to computational resources, including a DGX-1 superserver
 
 
 ## Schedule and materials
+
+<!-- 
 
 ### October 2019
 
