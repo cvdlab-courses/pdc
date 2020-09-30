@@ -30,10 +30,13 @@ Access will be granted to computational resources, including a DGX-1 superserver
 
 ## Teaching materials
 
-#.	[Lecture slides](lectures/)
-#.	McCool, Reinders, and Robison, [*Structured Parallel Programming*: Patterns for Efficient Computation](https://www.amazon.com/Structured-Parallel-Programming-Efficient-Computation/dp/0124159931), Morgan Kaufmann, 2012
-#. Avik Sengupta, [*Julia High Performance*: Optimizations, distributed computing, multithreading, and GPU programming with Julia 1.0 and beyond, 2nd Edition](https://juliahighperformance.com), Pakt>, 2019 
-#. Ivo Balbaert and Adrian Salceanu, [*Julia 1.0 Programming, Complete Reference Guide*](https://www.amazon.it/Julia-Programming-Complete-Reference-Guide/dp/1838822240/ref=tmm_other_meta_binding_swatch_0?_encoding=UTF8&qid=&sr=)
+1.	[Lecture slides](lectures/)
+
+2.	McCool, Reinders, and Robison, [*Structured Parallel Programming*: Patterns for Efficient Computation](https://www.amazon.com/Structured-Parallel-Programming-Efficient-Computation/dp/0124159931), Morgan Kaufmann, 2012
+
+3. Avik Sengupta, [*Julia High Performance*: Optimizations, distributed computing, multithreading, and GPU programming with Julia 1.0 and beyond, 2nd Edition](https://juliahighperformance.com), Pakt>, 2019 
+
+4. Ivo Balbaert and Adrian Salceanu, [*Julia 1.0 Programming, Complete Reference Guide*](https://www.amazon.it/Julia-Programming-Complete-Reference-Guide/dp/1838822240/ref=tmm_other_meta_binding_swatch_0?_encoding=UTF8&qid=&sr=)
 
 
 ## Schedule and materials
